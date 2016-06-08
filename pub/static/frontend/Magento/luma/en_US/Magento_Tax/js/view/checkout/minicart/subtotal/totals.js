@@ -1,0 +1,1 @@
+/opt/lampstack-5.5.31-0/apache2/htdocs/magento/vendor/magento/module-tax/view/frontend/web/js/view/checkout/minicart/subtotal/totals.js
