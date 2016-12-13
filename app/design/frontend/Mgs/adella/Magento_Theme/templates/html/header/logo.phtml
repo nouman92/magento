@@ -1,0 +1,31 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<?php $themeHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?>
+<?php $enableSticky = $themeHelper->getStoreConfig('mgstheme/general/sticky_menu'); ?>
+<?php $logoSticky = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_logo_sticky')->toHtml() ?>
+<?php if ($block->isHomePage()):?>
+    <strong class="logo<?php if($enableSticky !== false && $logoSticky): ?> hidden-sticky<?php endif ?>">
+<?php else: ?>
+    <a class="logo<?php if($enableSticky !== false && $logoSticky): ?> hidden-sticky<?php endif ?>" href="<?php echo $block->getUrl(''); ?>" title="<?php /* @escapeNotVerified */ echo $storeName ?>">
+<?php endif ?>
+        <img src="<?php /* @escapeNotVerified */ echo $block->getLogoSrc() ?>"
+             alt="<?php /* @escapeNotVerified */ echo $block->getLogoAlt() ?>"
+             <?php echo $block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+             <?php echo $block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+        />
+<?php if ($block->isHomePage()):?>
+    </strong>
+<?php else:?>
+    </a>
+<?php endif?>

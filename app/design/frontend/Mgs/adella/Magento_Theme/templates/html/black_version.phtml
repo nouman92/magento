@@ -1,0 +1,6 @@
+<?php $themeHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?>
+<?php $enableBlack = $themeHelper->getStoreConfig('mgstheme/general/layout_style'); ?>
+<?php if($enableBlack): ?>
+	<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('css/black-theme.css'); ?>" />
+	<link rel="stylesheet" type="text/css" href="<?php echo $block->getViewFileUrl('css/black-responsive.css'); ?>" />
+<?php endif ?>

@@ -1,0 +1,203 @@
+<home>
+	<static_block>
+		<item>
+			<title>Adella Logo Menu Dark</title>
+			<identifier>adella_logo_menu</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/adella_logo_dark_56.png"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Logo Sticky</title>
+			<identifier>adella_logo_sticky</identifier>
+			<content><![CDATA[<p><span><img src="{{media url="wysiwyg/sticky_logo.png"}}" alt="" /></span></p>]]></content>
+		</item>
+		
+		<item>
+			<title>Adella Block Vertical Menu</title>
+			<identifier>adella_vertical_menu</identifier>
+			<content><![CDATA[<div class="block-vertical-menu">
+<div class="block-title">
+<h4><em class="fa fa-bars">&nbsp;</em>Vertical menu</h4>
+</div>
+<div class="block-content">{{block class="MGS\Mmegamenu\Block\Vertical" menu_id="2" template="MGS_Mmegamenu::vertical.phtml"}}</div>
+</div>]]></content>
+		</item>
+		
+		<item>
+			<title>Adella Product Tags</title>
+			<identifier>adella_product_tags</identifier>
+			<content><![CDATA[<div class="block-product-tags">
+<div class="block-title">
+<h4>Product tags</h4>
+</div>
+<div class="block-content"><a href="#">Top</a> <a href="#">Fashion</a> <a href="#">Collection Men</a> <a href="#">Collection Men</a> <a href="#">Gallery</a> <a href="#">New</a> <a href="#">Top</a> <a href="#">Fashion</a> <a href="#">Collection Men</a></div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Slider Black Home 9</title>
+			<identifier>adella_slider_black_home_9</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/slider-9-black.jpg"}}" alt="" /></div>
+<div><img class="img-responsive" src="{{media url="wysiwyg/slider-91-black.jpg"}}" alt="" /></div>
+<div><img class="img-responsive" src="{{media url="wysiwyg/slider-92-black.jpg"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Block  Free Shipping center</title>
+			<identifier>adella_freeshipping_center</identifier>
+			<content><![CDATA[<div class="block-text text-center">
+<div class="icon"><span class="pe-7s-plane">&nbsp;</span></div>
+<div class="box-text"><span class="h5">Free Shipping On Over Oder $500</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Block Money Center</title>
+			<identifier>adella_money_center</identifier>
+			<content><![CDATA[<div class="block-text text-center">
+<div class="icon"><span class="pe-7s-back">&nbsp;</span></div>
+<div class="box-text">
+<span class="h5">100% money back</span>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit 
+Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Block Support Center</title>
+			<identifier>adella_support_center</identifier>
+			<content><![CDATA[<div class="block-text text-center">
+<div class="icon"><span class="pe-7s-help2">&nbsp;</span></div>
+<div class="box-text">
+<span class="h5">Oline support 24/7</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit 
+Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>		
+		<item>
+			<title>Adella Instagram Feed</title>
+			<identifier>adella_instagram_feed</identifier>
+			<content><![CDATA[<div class="instagram-footer">
+<div class="block-title"><span class="h4"><span class="title">Instagram feeds</span></span></div>
+{{block class="MGS\\Social\\Block\\Instagram" name="instagram.feed" template="MGS_Social::instagram.phtml"}}</div>]]></content>
+		</item>	
+	</static_block>
+	
+	<cms_page>
+		<title>Adella Dark Home Version 5</title>
+		<identifier>adella_dark_home_version_5</identifier>
+		<page_layout>1column</page_layout>
+		<content><![CDATA[<div class="container">
+<div class="row">
+<div class="col-md-3">
+<div class="sidebar">
+<!-- VERTICAL MENU-->
+<div class="section padding-top40 padding-bottom30">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_vertical_menu"}}</div>
+<!--HOT DEAL -->
+<div class="section padding-top30">{{widget type="MGS\Mpanel\Block\Widget\Deals" title="Hot deals" custom_class="navigation-top-right" product_id="12,11,10,9" per_row="1" slider_mode="1" slider_control="1"}}</div>
+<!-- CATEGORY PRODUCT LIST -->
+<div class="section padding-top15 padding-bottom30 padding-bottom15-sm">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="weekly featured" custom_class="navigation-top-right" view_mode="mode_list" type_list="new" category_id="category/6" slider_mode_grid="1" per_row_grid="1" number_show="12"}}</div>
+<!-- PROMO BANNER -->
+<div class="promo-sidebar section hidden-xs hidden-sm">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="13" template="banner.phtml"}}</div>
+<!-- TESTIMONIAL -->
+<div class="padding-top60 padding-bottom30 section padding-top15-sm">{{widget type="MGS\Testimonial\Block\Widget\Testimonial" title="Testimonials" number_of_posts="5" show_thumbnail="1" show_nav="1" show_dots="0" custom_class="testimonial-mode-base navigation-top-right"}}</div>
+<!-- PRODUCT TAGS BLOCK-->
+<div class="padding-top30">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_product_tags"}}</div>
+</div>
+</div>
+<!-- RIGHT -->
+<div class="col-md-9">
+<!-- SLIDER-->
+<div class="padding-top40 padding-bottom30 section padding-top15-sm">{{widget type="MGS\Mpanel\Block\Widget\Slider" block_id="adella_slider_black_home_9" banner_height="475" animate="1" banner_owl_auto="1" banner_owl_speed="6000" banner_owl_dot="1" banner_owl_loop="1"}}</div>
+<!-- PROMO BANNER -->
+<div class="padding-bottom30 section padding-bottom0-xs">
+<div class="row">
+<div class="col-md-6 hidden-sm hidden-xs">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="promo_the_biggest_09" template="banner.phtml"}}</div>
+<div class="col-md-6 hidden-sm hidden-xs">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="promo_men_home9" template="banner.phtml"}}</div>
+</div>
+</div>
+<!-- FEATURED PRODUCT -->
+<div class="padding-top30 section padding-top15-sm">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="Featured products" custom_class="navigation-top-right border-title sidebar-nav" view_mode="mode_grid" type_list="attribute" attribute_filter_list="featured_product" slider_mode_grid="1" per_row_grid="4" number_show="12"}}</div>
+<!-- PROMO BANNER -->
+<div class="promo-banner-section section hidden-xs">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="promo_lookbook" template="banner.phtml"}}</div>
+<!-- New products -->
+<div class="padding-top60 section padding-top30-sm">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="New products" custom_class="navigation-top-right border-title sidebar-nav" view_mode="mode_grid" type_list="new" category_id="category/3" slider_mode_grid="1" per_row_grid="4" number_show="12"}}</div>
+<!-- BEST SELLER -->
+<div class="section">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="Best seller" custom_class="navigation-top-right border-title sidebar-nav" view_mode="mode_grid" type_list="sale" slider_mode_grid="1" per_row_grid="4" number_show="12"}}</div>
+<!-- BLOG-->
+<div class="padding-bottom60 section padding-bottom30-sm">{{widget type="MGS\Blog\Block\Widget\Lastest" title="Latest From Blog" number_of_posts="10" show_thumbnail="1" thumbnail_width="240" thumbnail_height="180" show_short_content="1" limit_characters_short_content="100" view_as="owl_carousel" custom_class="navigation-top-right border-title blog-viewmode-base sidebar-nav" items="3" navigation="1" template="widget/default.phtml"}}</div>
+</div>
+</div>
+</div>
+<!-- BRAND --><hr style="border: none;border-top: 1px dashed #272727; margin: 0; padding: 0;" />
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12 col-xs-12">
+<div class="padding-top75 padding-bottom75 section">{{widget type="MGS\Brand\Block\Widget\Brand" brand_ids="1,2,3,4,7,8,9,10,11,12,13,14,15" view_as="owl_carousel" items="5" image_width="136" image_height="46" autoplay="1" stop_on_hover="1" template="widget/default.phtml"}}</div>
+</div>
+</div>
+</div>
+<hr style="border: none;border-top: 1px dashed #272727; margin: 0; padding: 0;" /><!--BLOCK STATIC -->
+<div class="container">
+<div class="padding-top70 padding-bottom70">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_freeshipping_center"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_money_center"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_support_center"}}</div>
+</div>
+</div>
+</div>]]></content>
+	</cms_page>
+	<promo_banner>
+		<item>
+			<title>Promo The Biggest Black_09</title>
+			<filename>/p/r/promo-black-91.jpg</filename>
+			<url><![CDATA[#]]></url>
+			<button><![CDATA[]]></button>
+			<text_align>middle-left</text_align>
+			<content><![CDATA[<div class="promo-box-text" style="padding: 0 45px;">
+<span class="text-right h2 font-playfair"> The Biggest</span>
+<span class="text-left h2 font-playfair"> wintter collection</span>
+</div>]]></content>
+			<effect>zoom</effect>
+			<custom_class><![CDATA[]]></custom_class>
+			<status>1</status>
+			<identifier>promo_the_biggest_09</identifier>
+		</item>
+		<item>
+			<title>Promo men's conllection home9</title>
+			<filename>/p/r/promo-black-92.jpg</filename>
+			<url><![CDATA[#]]></url>
+			<button><![CDATA[]]></button>
+			<text_align>middle-center</text_align>
+			<content><![CDATA[<div class="promo-box-text">
+<span class="font-playfair h2">Men's collection</span>
+<span class="font-playfair text-15 h2 padding-top10">specail today</span>
+</div>]]></content>
+			<effect>zoom</effect>
+			<custom_class><![CDATA[]]></custom_class>
+			<status>1</status>
+			<identifier>promo_men_home9</identifier>
+		</item>
+		
+		<item>
+			<title>Promo Lookbook</title>
+			<filename>/p/r/lookbook-black9.jpg</filename>
+			<url><![CDATA[#]]></url>
+			<button><![CDATA[]]></button>
+			<text_align>middle-center</text_align>
+			<content><![CDATA[<div class="h2 font-playfair hidden-xs" style="color: #fff; margin: 0; font-style: italic; text-transform: uppercase; letter-spacing: 25px; font-size: 30px;">Look book 2016</div>]]></content>
+			<effect>zoom</effect>
+			<custom_class><![CDATA[]]></custom_class>
+			<status>1</status>
+			<identifier>promo_lookbook</identifier>
+		</item>
+	</promo_banner>
+	<theme_setting>
+		<general>
+			<layout_style>1</layout_style>
+			<header>header_3</header>
+			<footer>footer_9</footer>
+		</general>
+	</theme_setting>
+</home>

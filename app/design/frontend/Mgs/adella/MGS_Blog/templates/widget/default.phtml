@@ -1,0 +1,119 @@
+<?php
+$helper = $this->helper('MGS\Blog\Helper\Data');
+$collection = $block->getPostCollection();
+?>
+<?php if (count($collection)): ?>
+    <?php
+    $blockId = rand() . time();
+    $title = $this->getConfig('title');
+    $numberOfPosts = $this->getConfig('number_of_posts');
+    $showThumbnail = $this->getConfig('show_thumbnail');
+    $width = $this->getConfig('thumbnail_width', 240);
+    $height = $this->getConfig('thumbnail_height', 180);
+    $showShortContent = $this->getConfig('show_short_content');
+    $viewAs = $this->getConfig('view_as');
+    $customClass = $this->getConfig('custom_class');
+    ?>
+    <?php if ($viewAs == 'default'): ?>
+        <div class="block widget mgs-blog-lastest-posts <?php if ($customClass) {
+            echo $customClass;
+        } ?>">
+            <?php if ($title) { ?>
+                <div class="content-heading block-title">
+                    <h2><?php echo $title ?></h2>
+                </div>
+            <?php } ?>
+            <div class="block-content">
+                <ul class="default mgs-blog-lastest-post-list-<?php echo $blockId; ?> row">
+                    <?php foreach ($collection as $post) { ?>
+                        <li class="item">
+                            <?php if ($showThumbnail) { ?>
+                                <div class="image"><a href="<?php echo $post->getPostUrlWithNoCategory(); ?>" title="<?php echo $post->getTitle(); ?>"><img src="<?php echo $post->getThumbnailUrl(); ?>" alt="<?php echo $post->getTitle(); ?>" class="img-responsive"/></a></div>
+                            <?php } ?>
+                            <div class="title"><a href="<?php echo $post->getPostUrlWithNoCategory(); ?>" title="<?php echo $post->getTitle(); ?>"><?php echo $post->getTitle() ?></a></div>
+                            <?php if ($showShortContent) { ?>
+                                <div class="short-content">
+                                    <?php echo substr($post->getShortContent(), 0, $this->getConfig('limit_characters_short_content')); ?>
+                                </div>
+                            <?php } ?>
+                        </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    <?php endif; ?>
+    <?php if ($viewAs == 'owl_carousel'): ?>
+        <div class="block widget mgs-blog-lastest-posts <?php if ($customClass) {
+            echo $customClass;
+        } ?>">
+            <?php if ($title) { ?>
+                <div class="title-block">
+                    <h2><?php echo $title ?></h2>
+                </div>
+            <?php } ?>
+            <div class="block-content">
+                <div class="owl-carousel mgs-carousel-<?php echo $blockId; ?> mgs-blog-carousel">
+                    <?php foreach ($collection as $post) { ?>
+                        <div class="item">
+							<article>
+                            <?php if ($showThumbnail) { ?>
+                                <div class="image"><a href="<?php echo $post->getPostUrlWithNoCategory(); ?>" title="<?php echo $post->getTitle(); ?>"><img src="<?php echo $post->getThumbnailUrl(); ?>" alt="<?php echo $post->getTitle(); ?>" class="img-responsive"/></a></div>
+                            <?php } ?>
+							<div class="blog-desc">			
+								<div class="date font-playfair">
+									<span class="day"><?php echo date('d', strtotime($post->getCreatedAt())) ?></span>
+									<span class="month"><?php echo date('M', strtotime($post->getCreatedAt())) ?></span>
+								</div>
+                            <div class="title"><h4><a href="<?php echo $post->getPostUrlWithNoCategory(); ?>" title="<?php echo $post->getTitle(); ?>"><?php echo $post->getTitle() ?></a></h4></div>
+                            <?php if ($showShortContent) { ?>
+                                <div class="short-content">
+                                    <?php echo substr($post->getShortContent(), 0, $this->getConfig('limit_characters_short_content')); ?>
+                                </div>
+                            <?php } ?>
+							<a href="<?php echo $post->getPostUrlWithNoCategory(); ?>" class="read-more h6"><span><?php echo __('View more')?></span><i class="fa fa-arrow-right"></i></a>
+							</div>
+							</article>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+        <?php
+        if ($this->getConfig('autoplay')) {
+            $autoplay = 'true';
+        } else {
+            $autoplay = 'false';
+        }
+        if ($this->getConfig('stop_on_hover')) {
+            $stopOnHover = 'true';
+        } else {
+            $stopOnHover = 'false';
+        }
+        if ($this->getConfig('navigation')) {
+            $navigation = 'true';
+        } else {
+            $navigation = 'false';
+        }
+		
+        ?>
+        <script type="text/javascript">
+            require([
+				'jquery',
+				'mgs/owlcarousel'
+			], function ($) {
+                var owl = $('.mgs-carousel-<?php echo $blockId ?>');
+                owl.owlCarousel({
+                    items: <?php echo $this->getConfig('items', 5); ?>,
+                    autoPlay: <?php echo $autoplay; ?>,
+                    stopOnHover: <?php echo $stopOnHover; ?>,
+                    nav: <?php echo $navigation; ?>,
+					navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+					dots: false,
+					margin: 30,
+					responsive:{ 0 : {items: 1}, 600 : {items: 2}, 768 : {items: 2}, 970 : {items: 2}, 1199 : {items: <?php echo $this->getConfig('items', 5); ?>} }
+                });
+            });
+        </script>
+    <?php endif; ?>
+<?php endif; ?>
+

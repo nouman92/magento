@@ -1,0 +1,75 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Checkout\Block\Cart\Sidebar */
+?>
+<?php $helper = $this->helper('MGS\Mpanel\Helper\Data') ?>
+<?php $header = $helper->getStoreConfig('mgstheme/general/header') ?>
+<div data-block="minicart" class="minicart-wrapper block-cart-header switcher ">
+    <a class="action showcart" href="<?php echo $block->getShoppingCartUrl(); ?>"
+       data-bind="scope: 'minicart_content'">
+		<span class=" icon-cart">
+			<span class="pe-7s-shopbag"></span>
+			<?php if($header!='' && $header=='header_1'): ?>
+				<span data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading" class="count qty">
+					<span class="counter-number loaded"><!-- ko text: getCartParam('summary_count') -->0<!-- /ko --></span>
+					<span class="counter-number firstload">0</span>
+				</span>
+			<?php endif ?>
+		</span>
+		<?php if($header!='' && $header!='header_1' && $header!='header_2' && $header!='header_3' && $header!='header_4'): ?>
+			<span class="title-shopbag">
+				<span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false || getCartParam('summary_count') == 1}, blockLoader: isLoading">
+					<span class="counter-number counter1"><!-- ko text: getCartParam('summary_count') -->0<!-- /ko --> <?php echo __('items') ?></span>
+					<span class="counter-number counter2"><!-- ko text: getCartParam('summary_count') -->0<!-- /ko --> <?php echo __('item') ?></span>
+				</span>
+				<!-- ko if: getCartParam('subtotal') -->
+					<span data-bind="html: '<span>  -  </span>' + getCartParam('subtotal')"></span>
+				<!-- /ko -->
+			</span>
+		<?php elseif($header == 'header_2' || $header=='header_3' || $header=='header_4'): ?>
+			<span class="count qty" data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
+				<span class="count h6 loaded">(<span class="counter-number loaded"><!-- ko text: getCartParam('summary_count') -->0<!-- /ko --></span> <?php echo __('Items') ?>)</span>
+				<span class="count h6 firstload">(0 <?php echo __('Item') ?>)</span>
+			</span>
+		<?php endif ?>
+    </a>
+    <?php if ($block->getIsNeedToDisplaySideBar()): ?>
+        <div class="block block-minicart empty" style="display:none;"
+             data-role="dropdownDialog"
+             data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "defaultDialogClass":"dropdown-menu",
+                "buttons":null}}'>
+            <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                <!-- ko template: getTemplate() --><!-- /ko -->
+            </div>
+			<?php echo $block->getChildHtml('minicart.addons'); ?>
+        </div>
+    <?php endif ?>
+    <script>
+        window.checkout = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>;
+    </script>
+    <script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout();?>
+        },
+		"*": {
+            "Magento_Ui/js/block-loader": "<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+        }
+    }
+    </script>
+</div>
+

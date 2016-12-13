@@ -1,0 +1,89 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Currency switcher
+ *
+ * @see \Magento\Directory\Block\Currency
+ */
+?>
+<?php if ($block->getCurrencyCount() > 1): ?>
+<?php $currencies = $block->getCurrencies(); ?>
+<?php $currentCurrencyCode = $block->getCurrentCurrencyCode(); ?>
+<?php $id = $block->getIdModifier() ? '-' . $block->getIdModifier() : ''?>
+
+<?php $helper = $this->helper('MGS\Mpanel\Helper\Data') ?>
+<?php $header = $helper->getStoreConfig('mgstheme/general/header') ?>
+
+	<?php if($header=='' || $header=='header_1'): ?>
+		<h6><?php echo __('Currency'); ?></h6>
+		<ul>
+			<?php foreach ($currencies as $_code => $_name): ?>
+				<?php if ($_code == $currentCurrencyCode): ?>
+					<li class="currency-<?php echo $_code ?> active">
+						<span class="color-theme"><?php echo $_code ?> - <?php echo $_name ?></span>
+					</li>
+				<?php else: ?>
+					<li class="currency-<?php echo $_code ?> switcher-option">
+						<a href="#" data-post='<?php echo $block->getSwitchCurrencyPostData($_code); ?>'><?php echo $_code ?> - <?php echo $_name ?></a>
+					</li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+	<?php elseif($header=='header_2' || $header=='header_3' || $header=='header_4'): ?>
+		<div class="dropdown currency-dropdown">
+			<button id="currency-drd" class="dropdown-toggle h6" data-toggle="dropdown" type="button">
+				<?php foreach ($currencies as $_code => $_name): ?>
+					<?php if ($_code == $currentCurrencyCode): ?>
+						<?php echo $_code ?>
+					<?php endif; ?>
+				<?php endforeach; ?>
+			</button>
+			<div class="form-currency dropdown-menu" aria-labelledby="currency-drd" role="menu">
+				<ul>
+					<?php foreach ($currencies as $_code => $_name): ?>
+						<?php if ($_code != $currentCurrencyCode): ?>
+							<li class="currency-<?php echo $_code ?> switcher-option">
+								<a href="#" data-post='<?php echo $block->getSwitchCurrencyPostData($_code); ?>'><?php echo $_code ?> - <?php echo $_name ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	<?php else: ?>
+		<div class="switcher currency switcher-currency" id="switcher-currency<?php echo $id?>">
+			<!--strong class="label switcher-label"><span><?php echo __('Currency') ?></span></strong-->
+			<div class="actions dropdown options switcher-options">
+				<div class="action toggle switcher-trigger" id="switcher-currency-trigger<?php echo $id?>">
+					<strong class="language-<?php echo $block->escapeHtml($block->getCurrentCurrencyCode()) ?>">
+						<span><?php echo $block->escapeHtml($currentCurrencyCode) ?> - <?php echo @$block->escapeHtml($currencies[$currentCurrencyCode]) ?></span>
+					</strong>
+				</div>
+
+				<ul class="dropdown switcher-dropdown" data-mage-init='{"dropdownDialog":{
+					"appendTo":"#switcher-currency<?php echo $id?> > .options",
+					"triggerTarget":"#switcher-currency-trigger<?php echo $id?>",
+					"closeOnMouseLeave": false,
+					"triggerClass":"active",
+					"parentClass":"active",
+					"buttons":null}}'>
+					<?php foreach ($currencies as $_code => $_name): ?>
+						<?php if ($_code != $currentCurrencyCode): ?>
+							<li class="currency-<?php echo $_code ?> switcher-option">
+								<a href="#" data-post='<?php echo $block->getSwitchCurrencyPostData($_code); ?>'><?php echo $_code ?> - <?php echo $_name ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	<?php endif ?>
+<?php endif; ?>

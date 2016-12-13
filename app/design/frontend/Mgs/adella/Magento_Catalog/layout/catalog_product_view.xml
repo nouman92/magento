@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">   
+    <body>	
+		<referenceContainer name="content">
+			<container name="product.before" htmlTag="div" htmlClass="row" before="-">
+				<container name="product.info.main.container" htmlTag="div" htmlClass="product-view-info">
+					<container name="product.info.media" htmlTag="div" htmlClass="product media col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-left" before="-"/>
+					<container name="product.info.main" htmlTag="div" htmlClass="product-info-main col-lg-6 col-md-6 col-sm-6 col-xs-12 pull-right" after="product.info.media" >
+						<block class="Magento\Catalog\Block\Product\View" name="product.info.name" template="product/view/name.phtml" before="-"/>
+						
+						<container name="product.info.stock.sku" htmlTag="div" htmlClass="product-info-stock-sku" ifconfig="mpanel/product_details/sku" after="product.info.name"/>
+						
+						<container name="product.info.review.mpanel" ifconfig="mpanel/product_details/reviews_summary" after="product.info.stock.sku"/>
+						
+						<container name="product.info.short.description" ifconfig="mpanel/product_details/short_description" htmlTag="div" htmlClass="short-description" after="product.info.price"/>
+						
+						<container name="product.custom.block.top"  htmlTag="div" htmlClass="mgs_panel_static_custom" after="product.info.extrahint">
+							<block class="Magento\Cms\Block\Block" name="product.custom.top">
+								<arguments><argument name="block_id" xsi:type="string">mgs_panel_product_static_block_top</argument></arguments>
+							</block>
+						</container>
+					</container>
+				</container>
+			</container>
+		</referenceContainer>
+		<referenceContainer name="content.aside">
+			<container name="product.custom.block.bottom"  htmlTag="div" htmlClass="mgs_panel_static_custom">
+				<block class="Magento\Cms\Block\Block" name="product.custom.bottom">
+					<arguments><argument name="block_id" xsi:type="string">mgs_panel_product_static_block_bottom</argument></arguments>
+				</block>
+			</container>
+		</referenceContainer>
+		<referenceContainer name="sidebar.main">
+			<block class="Magento\Catalog\Block\Product\ProductList\Related" name="catalog.product.related" template="Magento_Catalog::product/list/items.phtml">
+                <arguments>
+                    <argument name="type" xsi:type="string">related</argument>
+                </arguments>
+            </block>
+		</referenceContainer>
+		
+		<move element="product.info.sku" destination="product.info.stock.sku"/>
+		
+		<move element="product.info.review" destination="product.info.review.mpanel"/>
+		
+		<move element="product.info.price" destination="product.info.main" after="product.info.review.mpanel"/>
+		
+		<move element="product.price.final" destination="product.info.price"/>
+		
+		<move element="product.info.type" destination="product.info.price" after="product.price.final"/>
+		
+		<move element="product.info.overview" destination="product.info.short.description" after="product.info.price"/>
+		
+		<move element="product.price.tier" destination="product.info.main" after="product.info.short.description"/>
+		
+		<move element="alert.urls" destination="product.info.main" after="product.price.tier"/>
+		
+		<move element="product.info" destination="product.info.main" after="alert.urls"/>
+		
+		<move element="product.info.extrahint"  destination="product.info.main" after="product.info"/>
+		
+		<referenceBlock name="product.info.addto" remove="true"/>
+		
+    </body>
+</page>

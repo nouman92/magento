@@ -1,0 +1,243 @@
+<home>
+	<static_block>
+		<item>
+			<title>Adella Logo Sticky</title>
+			<identifier>adella_logo_sticky</identifier>
+			<content><![CDATA[<div><span><img src="{{media url="wysiwyg/logo_sticky.png"}}" alt="" /></span></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Logo Menu Light</title>
+			<identifier>adella_logo_menu</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/logo_menu.png"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Slider Home13</title>
+			<identifier>adella_slider_home_13</identifier>
+			<content><![CDATA[<div ><img src="{{media url="wysiwyg/slider1-home13.jpg"}}" alt="" class="img-responsive" /></div>
+<div ><img src="{{media url="wysiwyg/slider2-home13.jpg"}}" alt="" class="img-responsive" /></div>
+<div ><img src="{{media url="wysiwyg/slider3-home13.jpg"}}" alt="" class="img-responsive" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella block left shipping</title>
+			<identifier>adella_block_left_shipping</identifier>
+			<content><![CDATA[<div class="block-text block-left">
+<div class="icon"><span class="pe-7s-plane">&nbsp;</span></div>
+<div class="box-text"><span class="h5">Free Shipping On Over Oder $500</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella block left money</title>
+			<identifier>adella_block_left_money</identifier>
+			<content><![CDATA[<div class="block-text block-left">
+<div class="icon"><span class="pe-7s-back">&nbsp;</span></div>
+<div class="box-text"><span class="h5">100% money back</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella block left support</title>
+			<identifier>adella_block_left_support</identifier>
+			<content><![CDATA[<div class="block-text block-left">
+<div class="icon"><span class="pe-7s-help2">&nbsp;</span></div>
+<div class="box-text"><span class="h5">Oline support 24/7</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Suspendisse consequat orci sed nibh ultricies</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella block hot trendy</title>
+			<identifier>adella_hot_trendy</identifier>
+			<content><![CDATA[<div class="block-hot-trendy"><a href="#"><img src="{{media url="wysiwyg/banner1.jpg"}}" /></a>
+<div class="box-text"><span class="h5 text-16 font-playfair" style="font-size: 24px;">Fashion For Women</span> <span class="h2 text-24 font-playfair" style="font-size: 30px;">hot &amp; trendy clothes</span>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<p>Suspendisse consequat orci sed ultricies</p>
+<div class="view-detail"><a class="btn btn-primary" href="#">Shop now</a> <a class="btn btn-default" href="#">Promotion</a></div>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Get Newsletter</title>
+			<identifier>adella_get_newsletter</identifier>
+			<content><![CDATA[<div class="banner-newsletter"><img src="{{media url="wysiwyg/banner2.jpg"}}" alt="" />
+<div class="box-text">{{block class="Magento\Newsletter\Block\Subscribe" template="Magento_Newsletter::subscribe-home.phtml"}}<span class="h2">get newsletter</span>
+<p>Get <span style="color: #5d957b;">20% off</span> by subcribing to our newsletter</p>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Block Our Categories Light</title>
+			<identifier>adella_our_categories_light</identifier>
+			<content><![CDATA[<div class="categories-list-slider">
+<div class="title-block">
+<h2>Our Categories</h2>
+</div>
+<div class="row">
+<div id="categories_slider" class="categories-slider">
+<div class="category-item category-hover "><a href="#"><img src="{{media url="wysiwyg/cate-11.jpg"}}" /> <img src="{{media url="wysiwyg/cate-1.jpg"}}" /> </a>
+<div class="box-text text-center"><span class="h3">Women's top</span>
+<p>35 products</p>
+</div>
+</div>
+<div class="category-item category-hover"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/cate-2.jpg"}}" alt="" /> <img class="img-responsive img-hover" src="{{media url="wysiwyg/cate-22.jpg"}}" alt="" /> </a>
+<div class="box-text text-center"><span class="h3">Men</span>
+<p>20 products</p>
+</div>
+</div>
+<div class="category-item"><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/cate-3.jpg"}}" alt="" /> </a>
+<div class="box-text text-center"><span class="h3">Women's top</span>
+<p>35 products</p>
+</div>
+</div>
+<div class="category-item "><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/cate-4.jpg"}}" alt="" /> </a>
+<div class="box-text text-center"><span class="h3">Women's top</span>
+<p>35 products</p>
+</div>
+</div>
+<div class="category-item "><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/cate-5.jpg"}}" alt="" /> </a>
+<div class="box-text text-center"><span class="h3">Women's top</span>
+<p>35 products</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" xml="space">//
+require([
+'jquery',
+'mgs/owlcarousel'
+],function($){
+var owl = $('#categories_slider');
+owl.owlCarousel({
+items: 3,
+autoplay: true,
+loop:true,
+stopOnHover: true,
+nav: true,
+navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+dots: false,
+margin: 30,
+responsive: {
+0 : {
+  items: 1
+}, 
+480: {items: 1},
+780: {items: 2},
+991:{items: 3},
+1200: {items: 3}}
+});
+});
+// </script>]]></content>
+		</item>
+	</static_block>
+	
+	<cms_page>
+		<title>Adella Home Version 6</title>
+		<identifier>adella_home_version_6</identifier>
+		<page_layout>1column</page_layout>
+		<content><![CDATA[<div class="container">{{widget type="MGS\Mpanel\Block\Widget\Slider" block_id="adella_slider_home_13" banner_height="650" animate="1" banner_owl_auto="1" banner_owl_speed="6000" banner_owl_nav="1" banner_owl_loop="1"}}</div>
+<!--BLOCK STATIC-->
+<div class="section padding-top70 padding-bottom30">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_block_left_shipping"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_block_left_money"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_block_left_support"}}</div>
+</div>
+</div>
+</div>
+<!--PRODUCT TAB SLIDER-->
+<div class="section padding-top40">
+<div class="container">
+<div class="row">
+<div class="col-md-12">{{widget type="MGS\Mpanel\Block\Widget\ProductTabAttr" type_list_tab_attr="featured_product,sale,mgs_tab_new" slider_mode="1" per_row="4" number_show="12" custom_class="navigation-top-right border-title"}}</div>
+</div>
+</div>
+</div>
+<!--Banner-->
+<div class="section padding-top20 padding-bottom15">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-12 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_hot_trendy"}}</div>
+<div class="col-md-4 hidden-sm hidden-xs">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="promo_trendy_2016" template="banner.phtml"}}</div>
+</div>
+</div>
+</div>
+<div class="section padding-top15 padding-bottom35">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-sm-12 col-xs-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_get_newsletter"}}</div>
+<div class="col-md-4 hidden-sm hidden-xs">{{widget type="MGS\Promobanners\Block\Widget\Banner" banner_id="promo_the_biggest" template="banner.phtml"}}</div>
+</div>
+</div>
+</div>
+<!--OUR CATEGORIES-->
+<div class="section padding-top35 padding-bottom30 navigation-top-right">
+<div class="container">
+<div class="row">
+<div class="col-md-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_our_categories_light"}}</div>
+</div>
+</div>
+</div>
+<!--CATEGORY PRODUCT LIST -->
+<div class="section padding-top40 padding-bottom40">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="Special" custom_class="block-left" view_mode="mode_list" type_list="top_rate" category_id="category/4" number_show="3"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="Must have" custom_class="block-left" view_mode="mode_list" type_list="attribute" category_id="category/4" attribute_filter_list="featured_product" number_show="3"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="New in" custom_class="block-left" view_mode="mode_list" type_list="new" category_id="category/3" number_show="3"}}</div>
+</div>
+</div>
+</div>
+<!--BRAND-->
+<div class="section">
+<div class="container">
+<div class="row">
+<div class="col-md-12"><hr style="border: none; border-top: 1px dashed #cccccc; margin: 0; padding: 0;" />
+<div class="padding-top70 padding-bottom70">{{widget type="MGS\Brand\Block\Widget\Brand" brand_ids="1,2,3,4,5,6,7,8,9,10,11,12,13,14,15" view_as="owl_carousel" custom_class="text-center" items="5" image_width="132" image_height="46" template="widget/default.phtml"}}</div>
+</div>
+</div>
+</div>
+</div>]]></content>
+	</cms_page>
+	<promo_banner>
+		<item>
+			<title>Promo Trendy2016</title>
+			<filename>/p/r/promo-3.jpg</filename>
+			<url><![CDATA[#]]></url>
+			<button><![CDATA[shop now]]></button>
+			<text_align>middle-center</text_align>
+			<content><![CDATA[<div class="promo-banner-text">
+<span class="h2 font-playfair" style="font-size: 30px;line-height:1;">the trendy 2016</span>
+<span class="text-15 font-playfair" style="font-size: 18px;">save to up 30%</span>
+</div>]]></content>
+			<effect>zoom</effect>
+			<custom_class><![CDATA[]]></custom_class>
+			<status>1</status>
+			<identifier>promo_trendy_2016</identifier>
+		</item>
+		<item>
+			<title>Promo The biggest</title>
+			<filename>/p/r/promo-5.jpg</filename>
+			<url><![CDATA[#]]></url>
+			<button><![CDATA[]]></button>
+			<text_align>middle-right</text_align>
+			<content><![CDATA[<div class="promo-box-text promo-box-right">
+<span class="h2 font-playfair text-box-right">The biggest</span>
+<span class="h2 font-playfair text-box-left">wintter collection</span>
+</div>]]></content>
+			<effect>zoom</effect>
+			<custom_class><![CDATA[]]></custom_class>
+			<status>1</status>
+			<identifier>promo_the_biggest</identifier>
+		</item>
+	</promo_banner>
+	<theme_setting>
+		<general>
+			<header>header_4</header>
+			<footer>footer_1</footer>
+		</general>
+	</theme_setting>	
+</home>

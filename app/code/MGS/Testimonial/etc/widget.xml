@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Magento/Widget/etc/widget.xsd">
+    <widget id="mgs_testimonials" class="MGS\Testimonial\Block\Widget\Testimonial">
+        <label translate="true">Testimonials</label>
+        <description translate="true"></description>
+        <parameters>
+            <parameter name="title" xsi:type="text" visible="true" sort_order="10">
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="number_of_posts" xsi:type="text" visible="true" required="true" sort_order="20">
+                <label translate="true">Number Of Testimonial To Display</label>
+                <value>5</value>
+            </parameter>
+            <parameter name="show_thumbnail" xsi:type="select" visible="true" sort_order="30" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Thumbnail</label>
+            </parameter>    
+			<parameter name="show_nav" xsi:type="select" visible="true" sort_order="40" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Navigation Slider</label>
+            </parameter>		
+			<parameter name="show_dots" xsi:type="select" visible="true" sort_order="50" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show Pagination Slider</label>
+            </parameter>
+			<parameter name="auto_play" xsi:type="select" visible="true" sort_order="60" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Auto Play Slider</label>
+            </parameter>
+            <parameter name="custom_class" xsi:type="text" visible="true" sort_order="80">
+                <label translate="true">Custom Class</label>
+            </parameter>            
+        </parameters>
+    </widget>
+</widgets>

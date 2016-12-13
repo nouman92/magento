@@ -1,0 +1,102 @@
+<?php
+$params = $this->getRequest()->getParams();
+$helper = $this->helper('MGS\Brand\Helper\Data');
+$collection = $block->getCollection();
+if ($this->getConfig('list_page_settings/small_image_width') != '') {
+    $width = $this->getConfig('list_page_settings/small_image_width');
+} else {
+    $width = 240;
+}
+if ($this->getConfig('list_page_settings/small_image_height') != '') {
+    $height = $this->getConfig('list_page_settings/small_image_height');
+} else {
+    $height = 180;
+}
+?>
+<?php if ($collection->count()): ?>
+    <div class="featured-brands brand-list block">
+        <div class="title-block">
+            <h3><?php echo __('Featured Brands'); ?></h3>
+        </div>
+        <div class="content">
+            <ul class="featured-brand-list" id="featured-brand-list">
+                <?php foreach ($collection as $brand): ?>
+                    <?php if (isset($params['char']) && $params['char'] != '' && $params['char'] == '0-9') : ?>
+                        <?php $letter = strtoupper(substr($brand->getName(), 0, 1)); ?>
+                        <?php if (ctype_digit($letter)): ?>
+                            <li class="item">
+								<div class="brand-content">
+									<div class="brand-image">
+										<a title="<?php echo $brand->getName(); ?>"
+										   href="<?php echo $brand->getUrl(); ?>">
+											<img style="height: <?php echo $height; ?>px;" class="brand-small-image img-responsive"
+												 alt="<?php echo $brand->getName(); ?>"
+												 src="<?php echo $brand->getSmallImageUrl(); ?>">
+										</a>
+									</div>
+									<?php if ($this->getConfig('list_page_settings/show_brand_name')): ?>
+										<h4 class="brand-title">
+											<a title="<?php echo $brand->getName(); ?>" href="<?php echo $brand->getUrl(); ?>">
+												<?php echo $brand->getName(); ?>
+												<?php if ($this->getConfig('list_page_settings/show_product_count')): ?>
+													<span><?php echo __('(%1)', $block->getProductCount($brand)); ?></span>
+												<?php endif; ?>
+											</a>
+										</h4>
+									<?php endif; ?>
+								</div>
+                            </li>
+                        <?php endif; ?>
+                    <?php else: ?>
+                        <li class="item">
+							<div class="brand-content">
+								<div class="brand-image">
+									<a title="<?php echo $brand->getName(); ?>"
+									   href="<?php echo $brand->getUrl(); ?>">
+										<img style="height: <?php echo $height; ?>px;" class="brand-small-image img-responsive"
+											 alt="<?php echo $brand->getName(); ?>"
+											 src="<?php echo $brand->getSmallImageUrl(); ?>">
+									</a>
+								</div>
+								<?php if ($this->getConfig('list_page_settings/show_brand_name')): ?>
+									<h4 class="brand-title">
+										<a title="<?php echo $brand->getName(); ?>" href="<?php echo $brand->getUrl(); ?>">
+											<?php echo $brand->getName(); ?>
+											<?php if ($this->getConfig('list_page_settings/show_product_count')): ?>
+												<span><?php echo __('(%1)', $block->getProductCount($brand)); ?></span>
+											<?php endif; ?>
+										</a>
+									</h4>
+								<?php endif; ?>
+							</div>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+				<li class="clear"></li>
+            </ul>
+			<script type="text/javascript">
+								require([
+									'jquery',
+									'mgs/owlcarousel'
+								], function(jQuery){
+									(function($) {
+									$("#featured-brand-list").owlCarousel({
+										items : 4,
+										lazyLoad : true,
+										loop: false,
+										nav : true,
+										dots : false,
+										autoPlay: false,
+										stopOnHover: false,
+										margin: 30,
+										navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+										responsive:{
+											0 : {items: 2}, 480 : {items: 2}, 600 : {items: 3}, 980 : {items: 3}, 1200 : {items: 4}
+										}
+									});
+									})(jQuery);
+								});
+			</script>
+        </div>
+    </div>
+<?php endif; ?>

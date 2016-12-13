@@ -1,0 +1,45 @@
+<?php $block = $this->getBlock() ?>
+<div class="footer-container footer-v6">
+	<div class="middle-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-4 col-xs-12 col-xs-half padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_custom_block_1')->toHtml() ?>
+				</div>
+				<div class="col-md-2 col-sm-3 col-xs-12 col-xs-half padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_custom_block_2')->toHtml() ?>
+				</div>
+				<div class="col-md-2 col-sm-3 col-xs-12 col-xs-half padding-bottom25 row-half-first">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_custom_block_3')->toHtml() ?>
+				</div>
+				<div class="col-md-2 col-sm-2 col-xs-12 col-xs-half padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_custom_block_4')->toHtml() ?>
+				</div>
+				<div class="col-md-3 col-sm-12 col-xs-12 padding-bottom25">
+					<div class="row">
+						<div class="col-md-12 col-sm-6 col-xs-12 col-xs-half">
+							<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_subscribe')->toHtml() ?>
+						</div>
+						<div class="col-md-12 col-sm-6 col-xs-12 col-xs-half">
+							<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer6_social')->toHtml() ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<address class="copy">
+						<span id="design-footer-copyright-text"><?php echo $this->getCopyright() ?></span>
+					</address>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_payment')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

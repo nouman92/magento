@@ -1,0 +1,178 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+?>
+<?php $mpanelHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?>
+<?php $header = $mpanelHelper->getStoreConfig('mgstheme/general/header') ?>
+<?php if($header != 'header_2' && $header !='header_4'): ?>
+	<div class="search-form <?php if($mpanelHelper->getStoreConfig('mpanel/form_mini_search/show_categories')): ?>select-search<?php endif;?>">
+		<button class="btn-close-search"><span class="pe-7s-close"></span></button>
+		<form class="form minisearch form-inline" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+			<div class="form-search">
+				<?php if($mpanelHelper->getStoreConfig('mpanel/form_mini_search/show_categories')): ?>
+					<?php $categories = $mpanelHelper->getCategories(); ?>
+					<?php $currentCategory = ""; ?>
+					<?php $currentCategoryId = ""; ?>
+					<?php foreach ($categories as $category) {
+							foreach ($category as $key => $value) {
+								if ($key == 'label') { $categoryName = $value; }
+								if ($key == 'value') { $categoryId = $value; }
+							}
+							if ($mpanelHelper->getCurrentlySelectedCategoryId() == $categoryId){
+								$currentCategory = $categoryName;
+								$currentCategoryId = $categoryId;
+								break;
+							}
+						} ?>
+					<input type="hidden" name="cat" id="cat" value="<?php echo $currentCategoryId; ?>"/>
+					<div class="search-select">
+						<div onclick="toggleCatSearch()">
+							<span id="cat-active-name" class="search-cat-active <?php if($header=='header_3'): ?> h6<?php endif;?>">
+								<?php if($currentCategory != ""): ?>
+									<?php echo $currentCategory ?>
+								<?php else: ?>
+									<?php if($header=='header_3'): ?>
+										<?php echo __('All Products'); ?>
+									<?php else: ?>
+										<?php echo __('All Categories'); ?>
+									<?php endif;?>
+								<?php endif ?>
+							</span>
+							<span class="pull-right"><span class="fa fa-angle-down"></span></span>
+						</div>
+						<ul id="select-cat-dropdown" style="display:none;">
+							<li>
+								<span onclick="setSearchCatValue('', '<?php echo __('All Categories') ?>')"><?php echo __('All Categories') ?></span>
+							</li>
+							<?php
+								foreach ($categories as $category) {
+									foreach ($category as $key => $value) {
+										if ($key == 'label') {
+											$categoryName = $value;
+										}
+										if ($key == 'value') {
+											$categoryId = $value;
+										}
+										if ($key == 'level') {
+											$categoryLevel = $value;
+										}
+									}
+									?>
+									<li class="level<?php echo $categoryLevel ?> <?php if ($mpanelHelper->getCurrentlySelectedCategoryId() == $categoryId): ?>active<?php endif; ?>">
+										<span onclick="setSearchCatValue('<?php echo $categoryId; ?>', '<?php echo $categoryName; ?>')"><?php echo $categoryName; ?></span>
+									</li>
+									<?php
+								}
+							?>
+						</ul>
+					</div>
+				<?php endif; ?>
+				<input id="search"
+				   data-mage-init='{"quickSearch":{
+						"formSelector":"#search_mini_form",
+						"url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest'); ?>",
+						"destinationSelector":"#search_autocomplete"}
+				   }'
+				   type="text"
+				   name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+				   value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+				   placeholder="<?php /* @escapeNotVerified */ echo __('Search...'); ?>"
+				   class="input-text form-control"
+				   maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+				   role="combobox"
+				   aria-expanded="true"
+				   aria-haspopup="false"
+				   aria-autocomplete="both"
+				   autocomplete="off"/>
+					
+				<button type="submit" title="<?php echo $block->escapeHtml(__('Search')) ?>" class="button">
+					<span class="pe-7s-search"></span>
+				</button>	   
+				<div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+				<?php echo $block->getChildHtml() ?>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		function toggleCatSearch(){
+			require([
+			'jquery'
+			], function(jQuery){
+				(function($) {
+					$('#select-cat-dropdown').slideToggle();
+					
+				})(jQuery);
+			});
+		}
+		require([
+			'jquery'
+		], function(jQuery){
+			(function($) {
+				$(document).ready(function(){
+					$('.btn-show-search').click(function(){
+						$('.header .search-form').toggleClass('show-now');
+					});
+					$('.btn-close-search').click(function(){
+						$('.header .search-form').removeClass('show-now');
+					});
+				});
+			})(jQuery);
+		});
+		
+		</script>
+	<?php if($mpanelHelper->getStoreConfig('mpanel/form_mini_search/show_categories')): ?>
+		<script type="text/javascript">
+			function setSearchCatValue(id,name){
+				require([
+				'jquery'
+				], function(jQuery){
+					(function($) {
+						$('#cat').val(id);
+						$('#cat-active-name').html(name);
+						$('#select-cat-dropdown').hide();
+						
+					})(jQuery);
+				});
+			}
+		</script>
+	<?php endif ?>
+<?php else: ?>
+	<div class="top-search-mini" id="top-search-mini">
+		<form class="form minisearch" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+			<div class="form-search">
+				<input id="search"
+				   data-mage-init='{"quickSearch":{
+						"formSelector":"#search_mini_form",
+						"url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest'); ?>",
+						"destinationSelector":"#search_autocomplete"}
+				   }'
+				   type="text"
+				   name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+				   value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+				   placeholder="<?php /* @escapeNotVerified */ echo __('Search...'); ?>"
+				   class="input-text h6 form-control"
+				   maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+				   role="combobox"
+				   aria-expanded="true"
+				   aria-haspopup="false"
+				   aria-autocomplete="both"
+				   autocomplete="off"/>
+					
+				<button type="submit" title="<?php echo $block->escapeHtml(__('Search')) ?>" class="button">
+					<span class="pe-7s-search"></span>
+				</button>	   
+				<div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+				<?php echo $block->getChildHtml() ?>
+			</div>
+		</form>
+	</div>
+<?php endif ?>

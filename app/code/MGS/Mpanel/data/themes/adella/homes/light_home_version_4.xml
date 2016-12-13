@@ -1,0 +1,45 @@
+<home>
+	<static_block>
+		<item>
+			<title>Adella Logo Sticky</title>
+			<identifier>adella_logo_sticky</identifier>
+			<content><![CDATA[<div><span><img src="{{media url="wysiwyg/logo_sticky.png"}}" alt="" /></span></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Logo Menu Light</title>
+			<identifier>adella_logo_menu</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/logo_menu.png"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Slider Home 4</title>
+			<identifier>adella_slider_home_4</identifier>
+			<content><![CDATA[<div class="bg-slider" style="background-image: url('pub/media/wysiwyg/slider_home_4_1.jpg');">&nbsp;</div>
+<div class="bg-slider" style="background-image: url('pub/media/wysiwyg/slider_home_4_2.jpg');">&nbsp;</div>
+<div class="bg-slider" style="background-image: url('pub/media/wysiwyg/slider_home_4_3.jpg');">&nbsp;</div>]]></content>
+		</item>
+	</static_block>
+	
+	<cms_page>
+		<title>Adella Home Version 4</title>
+		<identifier>adella_home_version_4</identifier>
+		<page_layout>1column</page_layout>
+		<content><![CDATA[<div>{{widget type="MGS\Mpanel\Block\Widget\Slider" block_id="adella_slider_home_4" banner_full="1" animate="1" banner_owl_auto="1" banner_owl_speed="6000" banner_owl_nav="1" banner_owl_loop="1"}}</div>]]></content>
+	</cms_page>
+	<theme_setting>
+		<general>
+			<header>header_1</header>
+			<footer>footer_4</footer>
+		</general>
+	</theme_setting>
+	<color_setting>
+		<footer>
+			<footer_custom>1</footer_custom>
+			<footer_social_color><![CDATA[#747474]]></footer_social_color>
+			<footer_social_color_hover><![CDATA[#5d957b]]></footer_social_color_hover>
+			<footer_social_background><![CDATA[transparent]]></footer_social_background>
+			<footer_social_background_hover><![CDATA[transparent]]></footer_social_background_hover>
+			<footer_social_border><![CDATA[transparent]]></footer_social_border>
+			<footer_social_border_hover><![CDATA[transparent]]></footer_social_border_hover>
+		</footer>
+	</color_setting>
+</home>

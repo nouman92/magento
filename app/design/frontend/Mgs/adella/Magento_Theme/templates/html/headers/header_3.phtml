@@ -1,0 +1,78 @@
+<?php $block = $this->getBlock() ?>
+<?php $themeHelper = $this->helper('MGS\Mpanel\Helper\Data'); ?>
+<?php $enableSticky = $themeHelper->getStoreConfig('mgstheme/general/sticky_menu'); ?>
+<?php $logoSticky = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_logo_sticky')->toHtml() ?>
+<div id="header-v3" class="header-v3 header-v2<?php if($enableSticky !== false): ?> sticky-menu<?php endif;?>">
+	<div class="top-content top-header-content header-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-4 col-xs-7 store-config">
+					<?php echo $block->getChildHtml('store_language') ?>
+					<?php echo $block->getChildHtml('currency') ?>
+				</div>
+				<div class="col-md-6 col-sm-8 col-xs-5">
+					<div class="account-link">
+						<button id="btn-drdac" class="dropdown-toggle h6 visible-sm visible-xs" data-toggle="dropdown" type="button">
+							<span class="visible-xs icon pe-7s-user"></span>
+							<span class="text-uppercase hidden-xs"><?php echo __('Account') ?></span>
+						</button>
+						<div class="dropdown-menu h6" aria-labelledby="btn-drdac" role="menu">
+							<?php echo $block->getChildHtml('top.links') ?>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="middle-header-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-12 col-xs-12 logo-block">
+					<?php echo $block->getChildHtml('logo') ?>
+				</div>
+				<div class="col-md-4 col-sm-8 col-xs-12 top-search-mobile ">					
+					<?php echo $block->getChildHtml('top.search') ?>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12 pull-right minicart-mobile">
+					<?php echo $block->getChildHtml('minicart') ?>
+					<?php if($this->helper('Magento\Wishlist\Helper\Data')->isAllow()): ?>
+						<div class="header-wl" data-bind="scope: 'wishlist'">
+							<a href="<?php /* @escapeNotVerified */ echo $this->helper('Magento\Wishlist\Helper\Data')->getListUrl() ?>">
+								<span class="pe-7s-like"></span>
+								<!-- ko if: wishlist().counter -->
+									<span data-bind="text: wishlist().counter" class="counter count h6"></span>
+								<!-- /ko -->
+							</a>
+						</div>
+					<?php endif ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu-content">
+		<div class="container">
+			<?php if($enableSticky !== false): ?>
+				<div class="sticky-logo">
+					<?php if($logoSticky): ?>
+						<?php echo $logoSticky; ?>
+					<?php else: ?>
+						<?php echo $block->getChildHtml('logo') ?>
+					<?php endif;?>
+				</div>
+			<?php endif;?>
+			<div class="menu-pt">
+				<button class="btn-responsive-nav btn-inverse visible-sm visible-xs">
+					<i class="pe-7s-menu"></i>
+				</button>
+				<div class="nav nav-main-collapse main-menu">
+					<div class="tile-menu-rps visible-sm visible-xs">
+						<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_logo_menu')->toHtml(); ?>							
+						<button class="btn-close-mn"><span class="pe-7s-close"></span></button>
+					</div>
+					<?php echo $block->getChildHtml('megamenu') ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

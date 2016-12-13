@@ -1,0 +1,172 @@
+<?php 
+	$menu = $this->getMenu();
+?>
+<?php if($this->getRequest()->getParam('id')){
+	$checkParam = true;
+	$id_param = $this->getRequest()->getParam('id');
+}else{
+	$checkParam = false;
+}
+?>
+<div class="menu-portfolio">
+	<div class="visible-xs mobile-ver">
+		<span id="curren-filter" class="h6">
+			<?php if($checkParam == false): ?>
+				<?php echo __('All Works'); ?>
+			<?php else: ?>
+				<?php foreach($menu as $_menu ): ?>
+					<?php if($id_param == $_menu->getId()): ?>
+						<?php echo $_menu->getCategoryName(); ?>
+					<?php endif ?>
+				<?php endforeach ?>
+			<?php endif ?>
+		</span>
+		<span class="icon pe-7s-menu"></span>
+	</div>
+	<ul class="tab-menu tabs_categories_porfolio">
+		<li><a class="button h6 <?php if(!$checkParam): ?>is-checked<?php endif ?>" data-filter=".item_all"><?php echo __('All Works'); ?></a></li>
+		<?php foreach($menu as $_menu ): ?>
+			<li><a class="button h6 <?php if($checkParam && $id_param == $_menu->getId()): ?>is-checked<?php endif ?>" data-filter=".item_<?php echo $_menu->getId(); ?>"><?php echo $_menu->getCategoryName(); ?></a></li>
+		<?php endforeach ?>
+	</ul>
+</div>
+<div class="tabs_categories_porfolio_content isotope row">
+	<div class="portfolio-grid on-load">
+		<?php // GET ALL PORTFOLIO ?>
+		<?php $portfolios = $this->getPortfolios(); ?>
+		<?php if(count($portfolios)): ?>
+			<?php foreach($portfolios as $portfolio): ?>
+				<div class="item item_all col-md-4 col-sm-6 col-xs-12 col-xs-half">
+					<div class="portfolio-top-content">
+						<?php $thumbnailUrl = $this->getThumbnailSrc($portfolio) ?>
+						<?php $portfolioUrl = $this->getPortfolioAddress($portfolio) ?>
+						<?php if($thumbnailUrl): ?>
+							<img src="<?php echo $thumbnailUrl ?>" alt="<?php echo $portfolio->getName() ?>" class="img-responsive"/>
+							<div class="link-portfolio">
+								<a data_tooltip="<?php echo __('View Detail') ?>" title="<?php echo __('View Detail') ?>" href="<?php echo $portfolioUrl; ?>"><span class="fa fa-search"></span></a>
+								<?php if($portfolio->getProjectUrl()): ?>
+									<a target="_blank" data_tooltip="<?php echo __('View Project') ?>" title="<?php echo __('View Project') ?>" href="<?php echo $portfolio->getProjectUrl() ?>">
+										<span class="fa fa-link"></span>
+									</a>
+								<?php endif ?>
+							</div>
+						<?php endif ?>
+					</div>
+					<div class="portfolio-bottom-content">
+						<p class="category-link"><?php echo $this->getCategoriesLink($portfolio) ?></p>
+						<h5><a href="<?php echo $portfolioUrl; ?>"><?php echo $portfolio->getName() ?></a></h5>
+					</div>
+				</div>
+			<?php endforeach ?>
+		<?php else: ?>
+			<div class="item item_<?php echo $_menu->getId(); ?>">
+				<div class="alert alert-danger"><?php echo __('There are no portfolios matching the selection.') ?></div>
+			</div>
+		<?php endif ?>
+		<?php // GET PORTFOLIO WITH CATEGORY ID ?>
+		<?php foreach($menu as $_menu ): ?>
+			<?php $portfolios = $this->getPortfolios($_menu->getId()); ?>
+			<?php if(count($portfolios)): ?>
+				<?php foreach($portfolios as $portfolio): ?>
+					<div class="item item_<?php echo $_menu->getId(); ?> col-md-4 col-sm-4 col-xs-12 col-xs-half">
+						<div class="portfolio-top-content">
+							<?php $thumbnailUrl = $this->getThumbnailSrc($portfolio) ?>
+							<?php $portfolioUrl = $this->getPortfolioAddress($portfolio) ?>
+							<?php if($thumbnailUrl): ?>
+								<img src="<?php echo $thumbnailUrl ?>" alt="<?php echo $portfolio->getName() ?>" class="img-responsive"/>
+								<div class="link-portfolio">
+									<a data_tooltip="<?php echo __('View Detail') ?>" title="<?php echo __('View Detail') ?>" href="<?php echo $portfolioUrl; ?>"><span class="fa fa-search"></span></a>
+									<?php if($portfolio->getProjectUrl()): ?>
+										<a target="_blank" data_tooltip="<?php echo __('View Project') ?>" title="<?php echo __('View Project') ?>" href="<?php echo $portfolio->getProjectUrl() ?>">
+											<span class="fa fa-link"></span>
+										</a>
+									<?php endif ?>
+								</div>
+							<?php endif ?>
+						</div>
+						<div class="portfolio-bottom-content">
+							<p class="category-link"><?php echo $this->getCategoriesLink($portfolio) ?></p>
+							<h5><a href="<?php echo $portfolioUrl; ?>"><?php echo $portfolio->getName() ?></a></h5>
+						</div>
+					</div>
+				<?php endforeach ?>
+			<?php else: ?>
+				<div class="item item_<?php echo $_menu->getId(); ?>">
+					<div class="alert alert-danger"><?php echo __('There are no portfolios matching the selection.') ?></div>
+				</div>
+			<?php endif ?>
+		<?php endforeach ?>
+	</div>
+</div>
+
+<script type="text/javascript">
+require(
+ [ 'require',
+	'jquery', 
+	'mgs/portfolio' 
+ ], function( require, $, Isotope ) {
+    // require jquery-bridget, it's included in isotope.pkgd.js
+    require([ 'jquery-bridget' ],
+		function() {
+      // make Isotope a jQuery plugin
+      $.bridget( 'isotope', Isotope );
+      
+	  $(window).load(function() {
+			setTimeout(function(){
+				$('.tabs_categories_porfolio_content > .portfolio-grid').removeClass('on-load');
+			}, 1000);
+			var container = $('.isotope').isotope({
+				itemSelector: '.item',
+				layoutMode: 'fitRows',
+				percentPosition: true,
+				masonry: {
+					columnWidth: '.item'
+				},
+				getSortData: {
+					name: '.item'
+				}
+			});
+			$('.tabs_categories_porfolio').each( function( i, buttonGroup ) {
+				var filterLoadValue = $(this).find('.is-checked').attr('data-filter');				
+				container.isotope({ filter: filterLoadValue });
+			});
+		});
+		$(window).ready(function(){	
+			$('.tabs_categories_porfolio .button').click(function(){
+				var text = $(this).text();
+				$('#curren-filter').html(text);
+				if($(window).width() < 768){
+					$('.menu-portfolio .tabs_categories_porfolio').slideUp('fast');
+				}
+			});
+			$('.menu-portfolio .mobile-ver .icon').click(function(){
+				$('.menu-portfolio .tabs_categories_porfolio').slideToggle('fast');
+			});
+			var container = $('.isotope').isotope({
+				itemSelector: '.item',
+				layoutMode: 'fitRows',
+				 percentPosition: true,
+				masonry: {
+					columnWidth: '.item'
+				},
+				
+				getSortData: {
+					name: '.item'
+				}
+			});	
+			$('.tabs_categories_porfolio').on( 'click', '.button', function() {
+				var filterValue = $(this).attr('data-filter');
+				
+				container.isotope({ filter: filterValue });
+				});
+			$('.tabs_categories_porfolio').each( function( i, buttonGroup ) {
+				var buttonGroup = $(buttonGroup);
+				buttonGroup.on( 'click', '.button', function() {
+					buttonGroup.find('.is-checked').removeClass('is-checked');
+					$(this).addClass('is-checked');
+				});
+			});
+		});
+    });
+});
+</script>

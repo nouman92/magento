@@ -1,0 +1,48 @@
+<?php $block = $this->getBlock() ?>
+<div class="footer-container footer-v2 footer-v9">
+	<div class="middle-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-6 col-xs-6 top-ft">
+					<div class="row">
+						<div class="col-md-3 col-xs-12 logo-ft">
+							<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_logo')->toHtml() ?>
+						</div>
+						<div class="col-md-4 col-xs-12 social-ft">
+							<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_social')->toHtml() ?>
+						</div>
+						<div class="col-md-5 col-xs-12 newsletter-ft">
+							<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_subscribe')->toHtml() ?>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_contact')->toHtml() ?>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-4 padding-bottom25 row-2sm-first row-2xs-first">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_custom_menu_1')->toHtml() ?>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-4 padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_custom_menu_2')->toHtml() ?>
+				</div>
+				<div class="col-md-3 col-sm-4 col-xs-4 padding-bottom25">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_instagram_feed')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<address class="copy">
+						<span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span>
+					</address>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_payment')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

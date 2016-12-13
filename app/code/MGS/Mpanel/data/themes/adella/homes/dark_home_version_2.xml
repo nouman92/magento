@@ -1,0 +1,190 @@
+<home>
+	<static_block>
+		<item>
+			<title>Adella Slider Black Home 1</title>
+			<identifier>adella_slider_black_home_1</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/dark_1_3.jpg"}}" alt="" /></div>
+<div><img class="img-responsive" src="{{media url="wysiwyg/dark_1_2.jpg"}}" alt="" /></div>
+<div><img class="img-responsive" src="{{media url="wysiwyg/dark_1_1.jpg"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Logo Menu Dark</title>
+			<identifier>adella_logo_menu</identifier>
+			<content><![CDATA[<div><img class="img-responsive" src="{{media url="wysiwyg/adella_logo_dark_56.png"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Logo Sticky</title>
+			<identifier>adella_logo_sticky</identifier>
+			<content><![CDATA[<p><span><img src="{{media url="wysiwyg/sticky_logo.png"}}" alt="" /></span></p>]]></content>
+		</item>
+		<item>
+			<title>Adella banner text left black</title>
+			<identifier>adella_text_left_black</identifier>
+			<content><![CDATA[<div class="banner-text-left">
+<div class="box-img"><span class="text-to-top">Save up to 30%</span>
+<div class="box-hover"><img class="image-responsive" src="{{media url="wysiwyg/banner-text-left-black.jpg"}}" alt="" /></div>
+</div>
+<span class="text-to-left">The trendy 2016</span></div>]]></content>
+		</item>
+		<item>
+			<title>Adella banner text right black</title>
+			<identifier>adella_text_right_black</identifier>
+			<content><![CDATA[<div class="banner-text-right">
+<div class="box-img"><span class="text-to-top">specail to day</span>
+<div class="box-hover"><img class="img-responsive" src="{{media url="wysiwyg/banner-text-right-black.jpg"}}" /></div>
+</div>
+<span class="text-to-right">collection's men</span></div>]]></content>
+		</item>
+		<item>
+			<title>Adella banner slider black version</title>
+			<identifier>adella_banner_slider_black_version</identifier>
+			<content><![CDATA[<div id="banner_carousel" class="banner-carousel">
+<div class="box-item box-style1"><img class="img-responsive" src="{{media url="wysiwyg/banner-drak1.jpg"}}" alt="" />
+<div class="box-text"><span class="text-top text-26 text-italic font-playfair">Spring collection</span> <span class="text-bottom text-26 text-italic font-playfair">Read for men</span></div>
+</div>
+<div class="box-item box-style2"><img class="img-responsive" src="{{media url="wysiwyg/banner-drak2.jpg"}}" alt="" />
+<div class="box-border "><span class="text-16 font-playfair">the biggest</span> <span class="text-30 font-playfair">summer collection</span>
+<p>Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet, consectetur</p>
+<div class="shop-now-abs"><a class=" btn btn-default2" href="#">Shop now</a></div>
+</div>
+</div>
+<div class="box-item box-style3"><img class="img-responsive" src="{{media url="wysiwyg/banner-drak3.jpg"}}" alt="" />
+<div class="box-text"><span class="text-left-item text-26 font-playfair">real for women</span> <span class="text-right-item text-26 font-playfair">summer collection</span>
+<p class="text-center margin-top10">Donec at mattis purus, ut accumsan nisl. Lorem ipsum dolor sit amet, consectetur</p>
+<a class="btn btn-default2" href="#">Shop now</a></div>
+</div>
+</div>
+<script type="text/javascript" xml="space">
+require([
+'jquery',
+'mgs/owlcarousel'
+],function($){
+var owl = $('#banner_carousel');
+owl.owlCarousel({
+items: 1,
+autoplay: true,
+loop:true,
+stopOnHover: true,
+nav: false,
+dots: true,
+reponsive: {0 : {items: 1}, 
+480: {items: 1},
+780: {items: 1},
+991:{items: 1},
+1200: {items: 1}}
+});
+});</script>]]></content>
+		</item>
+		<item>
+			<title>Adella Featured Title Center</title>
+			<identifier>adella_featured_title_center</identifier>
+			<content><![CDATA[<div class="title-block text-center">
+<h2>Featured Products</h2>
+<p>Shop from over 99 of the best brands, including adella</p>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Blog Title Center</title>
+			<identifier>adella_blog_title_center</identifier>
+			<content><![CDATA[<div class="title-block text-center">
+<h2 style="color: #fff;">The Blogs</h2>
+<p style="color: #626262;">visit the latest blogs from adella</p>
+</div>]]></content>
+		</item>
+	</static_block>
+	
+	<cms_page>
+		<title>Adella Dark Home Version 2</title>
+		<identifier>adella_dark_home_version_2</identifier>
+		<page_layout>1column</page_layout>
+		<content><![CDATA[<div>{{widget type="MGS\Mpanel\Block\Widget\Slider" block_id="adella_slider_black_home_1" banner_height="682" animate="1" banner_owl_auto="1" banner_owl_speed="6000" banner_owl_nav="1" banner_owl_loop="1"}}</div>
+<!-- BANNER -->
+<div class="section padding-top70 padding-bottom45 padding-sm-30">
+<div class="container">
+<div class="row">
+<div class="col-md-3 hidden-sm hidden-xs">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_text_left_black"}}</div>
+<div class="col-md-6 col-sm-12">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_banner_slider_black_version"}}</div>
+<div class="col-md-3 hidden-sm hidden-xs">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_text_right_black"}}</div>
+</div>
+</div>
+</div>
+<!-- FEATURED PRODUCT-->
+<div class="section padding-top40 padding-bottom25">
+<div class="container">
+<div class="row">
+<div class="col-md-12 padding-bottom10">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_featured_title_center"}}</div>
+<div class="col-md-12 padding-top10">{{widget type="MGS\Mpanel\Block\Widget\ProductList" view_mode="mode_grid" type_list="attribute" category_id="category/28" attribute_filter_list="featured_product" slider_mode_grid="1" per_row_grid="3" number_show="12"}}</div>
+</div>
+</div>
+</div>
+<!-- Testimonial-->
+<div class="section section-custom-after padding-top60" style="background-color: #1d1d1d;">
+<div class="container">
+<div class="row">
+<div class="col-md-12">{{widget type="MGS\Testimonial\Block\Widget\Testimonial" title="What's clients say ?" number_of_posts="5" show_thumbnail="1" show_dots="1" auto_play="1"}}</div>
+</div>
+</div>
+</div>
+<!--CATEGORY PRODUCT-->
+<div class="section padding-top70 padding-bottom40">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" custom_class="block-left" title="Special" view_mode="mode_list" type_list="top_rate" category_id="category/4" number_show="3"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" custom_class="block-left"  title="Must have" view_mode="mode_list" type_list="attribute" category_id="category/4" attribute_filter_list="featured_product" number_show="3"}}</div>
+<div class="col-md-4 col-sm-4 col-xs-12">{{widget type="MGS\Mpanel\Block\Widget\ProductList" title="New in" custom_class="block-left" view_mode="mode_list" type_list="new" category_id="category/3" number_show="3"}}</div>
+</div>
+</div>
+</div>
+<!--Blog-->
+<div class="section padding-top80 padding-bottom80" style="background-color: #1d1d1d;">
+<div class="container">
+<div class="row">
+<div class="col-md-12 padding-bottom15">{{widget type="Magento\Cms\Block\Widget\Block" template="widget/static_block/default.phtml" block_id="adella_blog_title_center"}}</div>
+<div class="col-md-12 padding-top15">{{widget type="MGS\Blog\Block\Widget\Lastest" number_of_posts="10" show_thumbnail="1" thumbnail_width="268" thumbnail_height="355" view_as="owl_carousel" items="2" navigation="1" template="widget/default.phtml"}}</div>
+</div>
+</div>
+</div>
+<!--Brand-->
+<div class="section padding-top70 padding-bottom80">
+<div class="container">
+<div class="row">
+<div class="col-md-12 padding-top15">{{widget type="MGS\Brand\Block\Widget\Brand" brand_ids="1,2,3,4,5,6,7,8,9,10" view_as="owl_carousel" items="5" image_width="132" image_height="46" navigation="1" template="widget/default.phtml"}}</div>
+</div>
+</div>
+</div>]]></content>
+	</cms_page>
+	<theme_setting>
+		<general>
+			<layout_style>1</layout_style>
+			<footer>footer_2</footer>
+			<header>header_1</header>
+		</general>
+		<custom_style>
+			<style><![CDATA[.cms-index-index .header-v1 { position: static !important; }
+.section-custom-after:after{
+background: url(pub/media/background/stores/5/bg-homepage.jpg) repeat center center scroll;
+}
+.view-more-cate{background: url(pub/media/background/stores/5/bg-homepage.jpg) repeat center center scroll;}]]></style>
+		</custom_style>
+	</theme_setting>
+	<color_setting>
+		<header>
+			<header_custom>1</header_custom>
+			<cart_number_background><![CDATA[#c68a43]]></cart_number_background>
+		</header>
+		<footer>
+			<footer_custom>1</footer_custom>
+			<middle_background_color><![CDATA[transparent]]></middle_background_color>
+			<middle_border_color><![CDATA[#dddddd]]></middle_border_color>
+			<middle_heading_color><![CDATA[#ffffff]]></middle_heading_color>
+			<middle_link_color><![CDATA[#ffffff]]></middle_link_color>
+			<middle_link_color_hover><![CDATA[#515151]]></middle_link_color_hover>
+			<footer_social_color><![CDATA[#ffffff]]></footer_social_color>
+			<footer_social_color_hover><![CDATA[#ffffff]]></footer_social_color_hover>
+			<footer_social_background><![CDATA[transparent]]></footer_social_background>
+			<footer_social_background_hover><![CDATA[#000000]]></footer_social_background_hover>
+			<footer_social_border><![CDATA[transparent]]></footer_social_border>
+			<footer_social_border_hover><![CDATA[#000000]]></footer_social_border_hover>
+		</footer>
+	</color_setting>
+</home>

@@ -1,0 +1,62 @@
+<?php
+$categories = $this->getStoreCategories(true,false,true);
+$categoryHelper = $this->getCategoryHelper();
+$catagories_show = $this->getCategoriesShow();
+?>
+<div class="menu-scroll-block menu-home">
+		<div class="title-menu">
+			<h5 class="title">
+				<?php if($this->getTitleBlock() != null): ?>
+					<?php echo $this->getTitleBlock(); ?>
+				<?php else: ?>
+					<?php echo __('Categories Navigation') ?>
+ 				<?php endif ?>
+			</h5>
+			<span class="sh-menu hidden-lg hidden-md"><i aria-hidden="true" class="fa fa-bars"></i></span>
+		</div>
+	<ul id="content-navigation" class="vertical-menu-widget scrollbar-inner">
+		<?php foreach($categories as $category): ?>
+			<?php if ($category->getIsActive() && in_array($category->getId(), $catagories_show)): ?>
+				<?php $childrenCategories = $this->getChildCategories($category) ?>
+				<li class="level0">
+					<a href="<?php echo $categoryHelper->getCategoryUrl($category) ?>"><?php echo $category->getName() ?></a>
+					<?php if($childrenCategories && $this->getSubCategoriesMenu($category->getId())): ?>
+						<?php echo $this->getChildCategoryHtml($childrenCategories,$category->getId()); ?>
+					<?php endif; ?>
+				</li>
+			<?php endif ?>
+		<?php endforeach; ?>
+	</ul>
+</div>
+<script type="text/javascript">
+	function showSubmenu(element) {
+		require([
+			'jquery'
+		], function ($) {
+			var elementId = $("#"+element);
+			var elementClass = $("."+element+" a");
+			elementId.slideToggle();
+			elementClass.toggleClass("collapse");
+		});
+	}
+	require([
+	'jquery',
+	'mgs/scrollbar'
+	], function(jQuery){
+		(function($) {
+			$(document).ready(function(){
+				var maxHeight = $('.menu-scroll-block #content-navigation').height();
+				var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+				if(isMac){
+					$('.menu-scroll-block #content-navigation').removeClass('scrollbar-inner');
+					$('.menu-scroll-block #content-navigation').addClass('scrollbar-macosx');
+				}
+				$('.menu-scroll-block #content-navigation').scrollbar();
+				$('.menu-scroll-block .vertical-menu-widget.scroll-wrapper').css('max-height', maxHeight+'px');
+				$(".menu-scroll-block .sh-menu").click(function(){
+					$(".menu-scroll-block .vertical-menu-widget.scroll-wrapper").slideToggle();
+				});
+			});
+		})(jQuery);
+	});
+</script>

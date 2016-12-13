@@ -1,0 +1,68 @@
+<?php
+$helper = $this->helper('MGS\Blog\Helper\Data');
+$collection = $block->getCollection();
+$showImage = $this->getConfig('general_settings/show_image');
+?>
+<?php if (!count($collection)): ?>
+    <div class="message info empty">
+        <div><?php echo __('Have no posts.') ?></div>
+    </div>
+<?php else: ?>
+    <div class="blog-list">
+        <?php foreach ($collection as $post): ?>
+            <div class="blog-post">
+				<div class="date font-playfair">
+					<span class="day"><?php echo date('d', strtotime($block->formatDate($post->getCreatedAt(), \IntlDateFormatter::MEDIUM, false))) ?></span>
+					<span class="month"><?php echo date('M', strtotime($block->formatDate($post->getCreatedAt(), \IntlDateFormatter::MEDIUM, false))) ?></span>
+				</div>
+				<?php if ($showImage): ?>
+					<div class="post-img">
+						<a class="post-title-link" title="<?php echo $post->getTitle(); ?>" href="<?php echo $post->getPostUrlWithNoCategory(); ?>">
+							<img class="img-responsive" alt="<?php echo $post->getTitle(); ?>"
+								 src="<?php echo $post->getImageUrl(); ?>">
+						</a>
+					</div>
+				<?php endif ?>
+				<div class="post-info">
+					<span class="user-author">
+						<span class="icon fa fa-user"></span>
+						<?php if ($post->getUpdatedByUser()): ?>
+							<span class="name"><?php echo __('By: %1', $post->getUpdatedByUser()); ?></span>
+						<?php else: ?>
+							<span class="name"><?php echo __('By: %1', $post->getUser()); ?></span>
+						<?php endif; ?>
+					</span>
+					<?php if ($post->getTags()): ?>
+						<?php $tags = explode(',', $post->getTags()); ?>
+						<div class="post-tags">
+							<i class="fa fa-tag" aria-hidden="true"></i>
+							<ul class="tags">
+								<?php $i = 0; foreach ($tags as $tag): $i++; ?>
+									<li><a title="<?php echo trim($tag); ?>" href="<?php echo $helper->getTagUrl(trim($tag)); ?>"><?php echo trim($tag); ?></a><?php if($i < count($tags)): ?>,<?php endif ?></li>
+								<?php endforeach; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+					<?php if ($this->getConfig('comment_settings/enabled')): ?>
+						<span class="comments-post">
+							<span class="icon fa fa-comment"></span>
+							<a class="comments" href="<?php echo $post->getPostUrlWithNoCategory(); ?>#comment-box"><?php echo __('%1 Comment(s)', $post->getCommentCount()) ?></a>
+						</span>
+					<?php endif; ?>
+				</div>
+				<div class="postTitle">
+					<h2><a href="<?php echo $post->getPostUrlWithNoCategory(); ?>"><?php echo $post->getTitle(); ?></a></h2>
+				</div>
+				<?php if ($post->getShortContent()): ?>
+                    <div class="postContent">
+                        <?php echo $post->getShortContent(); ?>
+						<div class="post-link">
+							<a class="aw-blog-read-more h6" title="<?php echo __('Read More'); ?>" href="<?php echo $post->getPostUrlWithNoCategory(); ?>"><?php echo __('Read More'); ?></a>
+						</div>
+                    </div>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <div class="blog-post-list-toolbar toolbar bottom"><?php echo $block->getPagerHtml(); ?></div>
+<?php endif; ?>

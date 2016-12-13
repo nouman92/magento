@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+$helper =  \Magento\Framework\App\ObjectManager::getInstance()->get('MGS\Mpanel\Helper\Data');
+$url = $helper->getCssUrl();
+$header = $helper->getStoreConfig('mgstheme/general/header');
+?>
+<!doctype html>
+<html <?php /* @escapeNotVerified */ echo $htmlAttributes ?>>
+    <head <?php /* @escapeNotVerified */ echo $headAttributes ?>>
+        <?php /* @escapeNotVerified */ echo $requireJs ?>
+        <?php /* @escapeNotVerified */ echo $headContent ?>
+        <?php /* @escapeNotVerified */ echo $headAdditional ?>
+		<?php echo $helper->getLinksFont() ?>
+		<link  rel="stylesheet" type="text/css"  media="all" href="<?php echo $url ?>" /> 
+    </head>
+    <body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "<?php /* @escapeNotVerified */ echo $loaderIcon; ?>"}}' <?php /* @escapeNotVerified */ echo $bodyAttributes ?>>
+		<?php if($header =='header_4'): ?>
+		<div class="home-header-fixed">
+		<?php endif;?>
+        <?php /* @escapeNotVerified */ echo $layoutContent ?>
+		<?php if($header =='header_4'): ?>
+		</div>
+		<?php endif;?>
+    </body>
+</html>

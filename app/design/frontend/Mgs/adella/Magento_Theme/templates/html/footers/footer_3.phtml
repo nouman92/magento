@@ -1,0 +1,38 @@
+<?php $block = $this->getBlock() ?>
+<div class="footer-container footer-v3">
+	<div class="middle-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-custom-5 col-sm-custom-5 col-xs-4 padding-bottom30">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer3_custom_menu_1')->toHtml() ?>
+				</div>
+				<div class="col-md-custom-5 col-sm-custom-5 col-xs-4 padding-bottom30">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer3_custom_menu_2')->toHtml() ?>
+				</div>
+				<div class="col-md-custom-5 col-sm-custom-5 col-xs-4 padding-bottom30">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer3_custom_menu_3')->toHtml() ?>
+				</div>
+				<div class="col-md-custom-5 col-sm-custom-5 col-xs-4 padding-bottom30 row-2xs-first">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer3_custom_menu_4')->toHtml() ?>
+				</div>
+				<div class="col-md-custom-5 col-sm-custom-5 col-xs-8 padding-bottom30 last-block">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer3_custom_menu_5')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<address class="copy">
+						<span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span>
+					</address>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_social')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

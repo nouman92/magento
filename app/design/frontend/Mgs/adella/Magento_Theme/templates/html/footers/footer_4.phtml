@@ -1,0 +1,17 @@
+<?php $block = $this->getBlock() ?>
+<div class="footer-container footer-v4">
+	<div class="bottom-footer">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 col-xs-12">
+					<address class="copy">
+						<span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span>
+					</address>
+				</div>
+				<div class="col-sm-6 col-xs-12">
+					<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_social')->toHtml() ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

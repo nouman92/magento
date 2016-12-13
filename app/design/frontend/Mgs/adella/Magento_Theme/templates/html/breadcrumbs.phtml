@@ -1,0 +1,67 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php  
+	$themeHelper = $this->helper('MGS\Mpanel\Helper\Data');
+	$themeSettings = $themeHelper->getThemeSettings();
+	$header = $themeHelper->getStoreConfig('mgstheme/general/header');
+?>
+<?php 
+	// Config type Breadcrumb
+	$typeBreadcrumbs = $themeSettings['breadcrumb']['breadcrumb_tyle'];
+?>
+<?php 
+	// Static block ( Background Breadcrumb ) - Magento_Theme/layout/default.xml
+	$bg_breadcrumb = $block->getChildHtml('adella_breadcrumb_background');
+?>
+<?php if($bg_breadcrumb == ""): ?>
+	<div class="breadcrumbs <?php if($header  == 'header_1'): ?>hd-1<?php endif ?> <?php if($typeBreadcrumbs): ?>type2<?php endif ?> background-css<?php if(!$crumbs || !is_array($crumbs)): ?> no-breadcrumbs<?php endif ?>">
+<?php else: ?>
+	<?php preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $bg_breadcrumb, $matches); ?>
+	<div style="background-image: url('<?php echo $matches[1][0]; ?>')" class="<?php if($header  == 'header_1'): ?>hd-1 <?php endif ?><?php if($typeBreadcrumbs): ?>type2<?php endif ?> breadcrumbs background-custom<?php if(!$crumbs || !is_array($crumbs)): ?> no-breadcrumbs<?php endif ?>">
+<?php endif ?>
+		<div class="container">
+			<div class="breadcrumbs-title">
+				<?php if($crumbs && is_array($crumbs)): ?>
+					<?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
+						<?php if ($crumbInfo['last']) : ?>
+							<h1><?php echo $block->escapeHtml($crumbInfo['label']) ?></h1>
+						<?php endif ?>
+					<?php endforeach; ?>
+				<?php else: ?>
+					<?php echo $this->getLayout()->createBlock("Magento\Theme\Block\Html\Title")->setTemplate("Magento_Theme::html/title.phtml")->toHtml(); ?>
+				<?php endif ?>
+			</div>
+			<?php if($crumbs && is_array($crumbs)): ?>
+				<div class="breadcrumbs-items">
+					<ul>
+						<?php foreach ($crumbs as $crumbName => $crumbInfo) : ?>
+							<?php if ($crumbInfo['link']) : ?>
+								<li class="item <?php echo $crumbName ?>">
+									<a href="<?php echo $crumbInfo['link'] ?>" title="<?php echo $block->escapeHtml($crumbInfo['title']) ?>">
+										<?php echo $block->escapeHtml($crumbInfo['label']) ?>
+									</a>
+									<span class="space"> | </span>
+								</li>
+							<?php elseif ($crumbInfo['last']) : ?>
+								<li class="active">
+									<?php echo $block->escapeHtml($crumbInfo['label']) ?>
+								</li>
+							<?php else: ?>
+								<li class="item">
+									<?php echo $block->escapeHtml($crumbInfo['label']) ?>
+									<span class="space"> | </span>
+								</li>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</ul>
+				</div>
+			<?php endif ?>
+		</div>
+	</div>

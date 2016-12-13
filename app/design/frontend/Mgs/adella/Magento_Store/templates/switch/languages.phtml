@@ -1,0 +1,85 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Language switcher template
+ */
+?>
+
+<?php if (count($block->getStores())>1): ?>
+<?php $id = $block->getIdModifier() ? '-' . $block->getIdModifier() : ''?>
+
+<?php $helper = $this->helper('MGS\Mpanel\Helper\Data') ?>
+<?php $header = $helper->getStoreConfig('mgstheme/general/header') ?>
+	<?php if($header=='' || $header=='header_1'): ?>
+		<h6><?php echo __('Language'); ?></h6>
+		<ul>
+			 <?php foreach ($block->getStores() as $_lang): ?>
+                <?php if ($_lang->getId() != $block->getCurrentStoreId()): ?>
+                    <li class="view-<?php echo $block->escapeHtml($_lang->getCode()); ?> switcher-option">
+                        <a href="#" data-post='<?php /* @escapeNotVerified */ echo $block->getTargetStorePostData($_lang); ?>'>
+                            <img alt="<?php echo $_lang->getCode(); ?>" src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/flags/' . $_lang->getCode() . '.png') ?>" /><?php echo $block->escapeHtml($_lang->getName()) ?></a>
+                    </li>
+				<?php else: ?>
+					<li class="view-<?php echo $block->escapeHtml($_lang->getCode()); ?> active">
+						<span class="color-theme"><img alt="<?php echo $_lang->getCode(); ?>" src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/flags/' . $_lang->getCode() . '.png') ?>" /><?php echo $block->escapeHtml($_lang->getName()) ?></span>
+					</li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+		</ul>
+	<?php elseif($header=='header_2' || $header='header_3'): ?>
+		<div class="dropdown language-dropdown">
+			<button id="language-drd" class="dropdown-toggle h6" data-toggle="dropdown" type="button">
+				<?php echo $block->escapeHtml($block->getStoreName()) ?>
+			</button>
+			<div class="form-language dropdown-menu" aria-labelledby="language-drd" role="menu">
+				<ul>
+					<?php foreach ($block->getStores() as $_lang): ?>
+						<?php if ($_lang->getId() != $block->getCurrentStoreId()): ?>
+							<li class="view-<?php echo $block->escapeHtml($_lang->getCode()); ?> switcher-option">
+								<a href="#" data-post='<?php /* @escapeNotVerified */ echo $block->getTargetStorePostData($_lang); ?>'>
+									<img alt="<?php echo $_lang->getCode(); ?>" src="<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/flags/' . $_lang->getCode() . '.png') ?>" />
+									<?php echo $block->escapeHtml($_lang->getName()) ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	<?php else: ?>
+		<div class="switcher language switcher-language" data-ui-id="language-switcher" id="switcher-language<?php /* @escapeNotVerified */ echo $id?>">
+			<strong class="label switcher-label"><span><?php /* @escapeNotVerified */ echo __('Language') ?></span></strong>
+			<div class="actions dropdown options switcher-options">
+				<div class="action toggle switcher-trigger" id="switcher-language-trigger<?php /* @escapeNotVerified */ echo $id?>">
+					<strong class="view-<?php echo $block->escapeHtml($block->getCurrentStoreCode()) ?>">
+						<span><?php echo $block->escapeHtml($block->getStoreName()) ?></span>
+					</strong>
+				</div>
+				<ul class="dropdown switcher-dropdown"
+					data-mage-init='{"dropdownDialog":{
+						"appendTo":"#switcher-language<?php /* @escapeNotVerified */ echo $id ?> > .options",
+						"triggerTarget":"#switcher-language-trigger<?php /* @escapeNotVerified */ echo $id ?>",
+						"closeOnMouseLeave": false,
+						"triggerClass":"active",
+						"parentClass":"active",
+						"buttons":null}}'>
+					<?php foreach ($block->getStores() as $_lang): ?>
+						<?php if ($_lang->getId() != $block->getCurrentStoreId()): ?>
+							<li class="view-<?php echo $block->escapeHtml($_lang->getCode()); ?> switcher-option">
+								<a href="#" data-post='<?php /* @escapeNotVerified */ echo $block->getTargetStorePostData($_lang); ?>'>
+									<?php echo $block->escapeHtml($_lang->getName()) ?></a>
+							</li>
+						<?php endif; ?>
+					<?php endforeach; ?>
+				</ul>
+			</div>
+		</div>
+	<?php endif ?>
+<?php endif; ?>

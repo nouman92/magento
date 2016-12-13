@@ -1,0 +1,61 @@
+<?php $helper = $this->helper('MGS\Mpanel\Helper\Data') ?>
+<?php $header = $helper->getStoreConfig('mgstheme/general/header') ?>
+<?php if($header!=''): ?>
+	<?php echo $this->getLayout()->createBlock('Magento\Theme\Block\Html\Header')->setBlock($block)->setTemplate('Magento_Theme::html/headers/'.$header.'.phtml')->toHtml() ?>
+<?php else: ?>
+<?php $enableSticky = $helper->getStoreConfig('mgstheme/general/sticky_menu'); ?>
+<?php $logoSticky = $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_logo_sticky')->toHtml() ?>
+	<div id="header-v1" class="header-v1<?php if($enableSticky !== false): ?> sticky-menu<?php endif;?>">
+		<div class="middle-header-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2 col-sm-3 col-xs-6">
+						<?php echo $block->getChildHtml('logo') ?>
+						<?php if($enableSticky !== false && $logoSticky): ?>
+							<div class="sticky-logo"><?php echo $logoSticky; ?></div>
+						<?php endif;?>
+					</div>
+					<div class="col-md-10 col-sm-9 col-xs-6">
+						<div class="setting-pt">
+							<div class="top-search-mini">
+								<button class="btn-show-search" type="button"><span class="pe-7s-search"></span></button>
+								<?php echo $block->getChildHtml('top.search') ?>
+							</div>
+							<div class="setting-drd" id="top-links">
+								<button id="top-links-trigger" class="dropdown-toggle action toggle top-links-trigger" data-toggle="dropdown" type="button">
+									<span class="pe-7s-config"></span>
+								</button>
+								<div class="dropdown top-links-dropdown" style="display:none;" data-mage-init='{"dropdownDialog":{
+									 "appendTo":"#top-links",
+									 "triggerTarget":"#top-links-trigger",
+									 "closeOnMouseLeave":false,
+									 "triggerClass":"active",
+									 "parentClass":"active",
+									 "buttons":null,
+									 "defaultDialogClass":"dropdown-menu"}}'>  
+										<h6><?php echo __('My Account'); ?></h6>
+										<?php echo $block->getChildHtml('top.links') ?>
+										<?php echo $block->getChildHtml('currency') ?>
+										<?php echo $block->getChildHtml('store_language') ?>
+								</div>
+							</div>
+							<?php echo $block->getChildHtml('minicart') ?>
+						</div>
+						<div class="menu-pt">
+							<button class="btn-responsive-nav btn-inverse visible-sm visible-xs">
+								<i class="pe-7s-menu"></i>
+							</button>
+							<div class="nav nav-main-collapse main-menu">
+								<div class="tile-menu-rps visible-sm visible-xs">
+									<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_logo_menu')->toHtml(); ?>							
+									<button class="btn-close-mn"><span class="pe-7s-close"></span></button>
+								</div>
+								<?php echo $block->getChildHtml('megamenu') ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php endif ?>

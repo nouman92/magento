@@ -1,0 +1,385 @@
+<install>
+	<static_block>
+		<item>
+			<title>Adella Contact Information</title>
+			<identifier>adella_contact_information</identifier>
+			<content><![CDATA[<h3>CONTACT US</h3>
+<ul class="ft-contact big-icon">
+<li><span class="icon pe-7s-map-marker">&nbsp;</span> ADELLA London Oxford Street 02 United Kingdom.</li>
+<li><span class="icon pe-7s-mail-open-file">&nbsp;</span> <a href="mailto:emailadella@gmail.com">emailadella@gmail.com</a><br /> <a href="mailto:emailsupport@gmail.com">emailsupport@gmail.com</a></li>
+<li><span class="icon pe-7s-call">&nbsp;</span> <a href="tel:+9234567890">(+92) 3456 7890</a><br /> <a href="tel:+9212345678">(+92) 1234 5678</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 3 Custom Menu 1</title>
+			<identifier>adella_footer3_custom_menu_1</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">My Account</a></li>
+<li><a href="#">My Wish List</a></li>
+<li><a href="#">My Compare</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 3 Custom Menu 2</title>
+			<identifier>adella_footer3_custom_menu_2</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">Order History</a></li>
+<li><a href="#">Store Location</a></li>
+<li><a href="#">Site Map</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 3 Custom Menu 3</title>
+			<identifier>adella_footer3_custom_menu_3</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">Help &amp; Contact</a></li>
+<li><a href="#">Shipping &amp; Taxes</a></li>
+<li><a href="#">Return Policy</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 3 Custom Menu 4</title>
+			<identifier>adella_footer3_custom_menu_4</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">Affiliates</a></li>
+<li><a href="#">Legal Notice</a></li>
+<li><a href="#">Manufacturers</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 3 Custom Menu 5</title>
+			<identifier>adella_footer3_custom_menu_5</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">Wekky Featured</a></li>
+<li><a href="#">New Products</a></li>
+<li><a href="#">Gift Guide</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Custom Block 1</title>
+			<identifier>adella_footer6_custom_block_1</identifier>
+			<content><![CDATA[<h3 class="ft-title-block">Contact us</h3>
+<ul class="ft-contact content-ft">
+<li><span class="icon pe-7s-map-marker">&nbsp;</span> ADELLA London Oxford Street 02 United Kingdom.</li>
+<li><span class="icon pe-7s-mail-open-file">&nbsp;</span> <a href="mailto:emailadella@gmail.com">emailadella@gmail.com</a><br /> <a href="mailto:emailsupport@gmail.com">emailsupport@gmail.com</a></li>
+<li><span class="icon pe-7s-call">&nbsp;</span> <a href="tel:+9234567890">(+92) 3456 7890</a><br /> <a href="tel:+9212345678">(+92) 1234 5678</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Custom Block 2</title>
+			<identifier>adella_footer6_custom_block_2</identifier>
+			<content><![CDATA[<h3 class="ft-title-block">Information</h3>
+<ul class="ft-vertical-menu content-ft">
+<li><a href="#">New collection</a></li>
+<li><a href="#">Best sellers</a></li>
+<li><a href="#">Manufacturers</a></li>
+<li><a href="#">New products</a></li>
+<li><a href="#"> Suppliers</a></li>
+<li><a href="#">Delivery &amp; returns</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Custom Block 3</title>
+			<identifier>adella_footer6_custom_block_3</identifier>
+			<content><![CDATA[<h3 class="ft-title-block">Our Offers</h3>
+<ul class="ft-vertical-menu content-ft">
+<li><a href="#">Help &amp; Contact</a></li>
+<li><a href="#">Shipping &amp; taxes</a></li>
+<li><a href="#">Return policy</a></li>
+<li><a href="#">Careers</a></li>
+<li><a href="#"> Affiliates</a></li>
+<li><a href="#">Legal Notice</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Custom Block 4</title>
+			<identifier>adella_footer6_custom_block_4</identifier>
+			<content><![CDATA[<h3 class="ft-title-block">Our Policy</h3>
+<ul class="ft-vertical-menu content-ft">
+<li><a href="#">My account</a></li>
+<li><a href="#">Order history</a></li>
+<li><a href="#">Wish list</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#"> Privacy Policy</a></li>
+<li><a href="#">Site map</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Social</title>
+			<identifier>adella_footer6_social</identifier>
+			<content><![CDATA[<h3 class="title-block-ft">Connect us</h3>
+<ul class="social-link">
+<li><a href="#">&nbsp;<span class="fa fa-facebook">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-twitter">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-linkedin">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-rss">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-dribbble">&nbsp;</span></a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer 6 Subscribe</title>
+			<identifier>adella_footer6_subscribe</identifier>
+			<content><![CDATA[<div class="subcribe-2">{{block class="Magento\\Newsletter\\Block\\Subscribe" template="Magento_Newsletter::footer-subscribe.phtml"}}</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Contact</title>
+			<identifier>adella_footer_contact</identifier>
+			<content><![CDATA[<ul class="ft-contact">
+<li><span class="icon pe-7s-map-marker">&nbsp;</span> ADELLA London Oxford Street 02 United Kingdom.</li>
+<li><span class="icon pe-7s-mail-open-file">&nbsp;</span> <a href="mailto:emailadella@gmail.com">emailadella@gmail.com</a><br /> <a href="mailto:emailsupport@gmail.com">emailsupport@gmail.com</a></li>
+<li><span class="icon pe-7s-call">&nbsp;</span> <a href="tel:+9234567890">(+92) 3456 7890</a><br /> <a href="tel:+9212345678">(+92) 1234 5678</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Custom Menu 1</title>
+			<identifier>adella_footer_custom_menu_1</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">My account</a></li>
+<li><a href="#">Order history</a></li>
+<li><a href="#">Wish list</a></li>
+<li><a href="#">Returns</a></li>
+<li><a href="#"> Privacy Policy</a></li>
+<li><a href="#">Site map</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Custom Menu 2</title>
+			<identifier>adella_footer_custom_menu_2</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">Help &amp; Contact</a></li>
+<li><a href="#">Shipping &amp; taxes</a></li>
+<li><a href="#">Return policy</a></li>
+<li><a href="#">Careers</a></li>
+<li><a href="#"> Affiliates</a></li>
+<li><a href="#">Legal Notice</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Custom Menu 3</title>
+			<identifier>adella_footer_custom_menu_3</identifier>
+			<content><![CDATA[<ul class="ft-vertical-menu">
+<li><a href="#">New collection</a></li>
+<li><a href="#">Best sellers</a></li>
+<li><a href="#">Manufacturers</a></li>
+<li><a href="#">New products</a></li>
+<li><a href="#"> Suppliers</a></li>
+<li><a href="#">Delivery &amp; returns</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Payment</title>
+			<identifier>adella_footer_payment</identifier>
+			<content><![CDATA[<ul class="payment-footer">
+<li><a href="#"><img src="{{media url="wysiwyg/payment_1.jpg"}}" alt="" /></a></li>
+<li><a href="#"><img src="{{media url="wysiwyg/payment_2.jpg"}}" alt="" /></a></li>
+<li><a href="#"><img src="{{media url="wysiwyg/payment_3.jpg"}}" alt="" /></a></li>
+<li><a href="#"><img src="{{media url="wysiwyg/payment_4.jpg"}}" alt="" /></a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Social</title>
+			<identifier>adella_footer_social</identifier>
+			<content><![CDATA[<ul class="social-link">
+<li><a href="#">&nbsp;<span class="fa fa-facebook">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-twitter">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-linkedin">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-rss">&nbsp;</span></a></li>
+<li><a href="#">&nbsp;<span class="fa fa-dribbble">&nbsp;</span></a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Subscribe</title>
+			<identifier>adella_footer_subscribe</identifier>
+			<content><![CDATA[<div>{{block class="Magento\\Newsletter\\Block\\Subscribe" template="Magento_Newsletter::footer-subscribe.phtml"}}</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Logo</title>
+			<identifier>adella_footer_logo</identifier>
+			<content><![CDATA[<div style="padding-top: 7px;"><img src="{{media url="wysiwyg/footer_logo_white.png"}}" alt="" /></div>]]></content>
+		</item>
+		<item>
+			<title>Adella Footer Menu</title>
+			<identifier>adella_footer_menu</identifier>
+			<content><![CDATA[<ul class="footer-menu">
+<li><a href="#">HELP &amp; CONTACT</a></li>
+<li><a href="#">SHIPPING &amp; TAXES</a></li>
+<li><a href="#">RETURN POLICY</a></li>
+<li><a href="#">AFFILIATES</a></li>
+<li><a href="#">LEGAL NOTICE</a></li>
+</ul>]]></content>
+		</item>
+		<item>
+			<title>Create Account Benefit</title>
+			<identifier>create_account_benefit</identifier>
+			<content><![CDATA[<div class="block-singup">
+<h3 class="title-step text-uppercase">Sign Up Today And You'll Be Able To :</h3>
+<ul>
+<li><span class="icon fa fa-check-square-o">&nbsp;</span>Speed your way through the checkout.</li>
+<li><span class="icon fa fa-check-square-o">&nbsp;</span>Track your orders easily.</li>
+<li><span class="icon fa fa-check-square-o">&nbsp;</span>Keep a record of all your purchases.</li>
+</ul>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella Instagram Feed</title>
+			<identifier>adella_instagram_feed</identifier>
+			<content><![CDATA[<div class="instagram-footer">
+<div class="block-title"><span class="h4"><span class="title">Instagram feeds</span></span></div>
+{{block class="MGS\\Social\\Block\\Instagram" name="instagram.feed" template="MGS_Social::instagram.phtml"}}</div>]]></content>
+		</item>	
+	</static_block>
+
+	<cms_page>
+		<item>
+			<title>Adella 404 Not Found Light</title>
+			<identifier>adella-no-route-light</identifier>
+			<content_heading></content_heading>
+			<page_layout>1column</page_layout>
+			<content><![CDATA[<div class="bg-404 text-colour-white" style="background-image: url('http://m2.magesolution.com/adella/pub/media/wysiwyg/bg_404.jpg');">
+<div class="content">
+<div class="logo"><a href="{{store url=""}}"><img src="{{media url="wysiwyg/logo_404.png"}}" alt="" /></a></div>
+<div class="text-center">
+<div class="title-404">404</div>
+<div class="h1 text-uppercase">This&rsquo;s Not The Web Page You&rsquo;re Looking For</div>
+<h3>Please try one of the following pages <a class="btn margin-left30 btn-default btn-lg" href="{{store url=""}}"><span class="text-colour-white">Home Page</span></a></h3>
+{{block class="Magento\\Framework\\View\\Element\\Template" name="no-router-search" template="Magento_Search::form.no.advance.phtml"}}
+<div class="copyright text-colour-silver padding-top40">Copyright @ 2015 <a href="{{store url=""}}"><span class="text-colour-white">ADELLA</span></a>. All rights reserved.</div>
+</div>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella 404 Not Found Dark</title>
+			<identifier>adella-no-route-dark</identifier>
+			<content_heading></content_heading>
+			<page_layout>1column</page_layout>
+			<content><![CDATA[<div class="bg-404 text-colour-white" style="background-image: url('http://m2.magesolution.com/adella/pub/media/wysiwyg/bg_404_black.jpg');">
+<div class="content">
+<div class="logo"><a href="{{store url=""}}"><img src="{{media url="wysiwyg/logo_404.png"}}" alt="" /></a></div>
+<div class="text-center">
+<div class="title-404">404</div>
+<div class="h1 text-uppercase">This&rsquo;s Not The Web Page You&rsquo;re Looking For</div>
+<h3>Please try one of the following pages <a class="btn margin-left30 btn-default btn-lg" href="{{store url=""}}"><span class="text-colour-white">Home Page</span></a></h3>
+{{block class="Magento\\Framework\\View\\Element\\Template" name="no-router-search" template="Magento_Search::form.no.advance.phtml"}}
+<div class="copyright text-colour-silver padding-top40">Copyright @ 2015 <a href="{{store url=""}}"><span class="text-colour-white">ADELLA</span></a>. All rights reserved.</div>
+</div>
+</div>
+</div>]]></content>
+		</item>
+		<item>
+			<title>Adella About Us</title>
+			<identifier>adella-about-us</identifier>
+			<content_heading></content_heading>
+			<page_layout>1column</page_layout>
+			<content><![CDATA[<div class="title-cms"><span class="title h2">ABOUT US</span></div>
+<div class="row margin-bottom40">
+<div class="col-md-6 col-sm-12 col-xs-12 margin-bottom40 pull-right"><img class="img-responsive" src="{{media url="wysiwyg/img_about.jpg"}}" alt="" /></div>
+<div class="col-md-6 col-sm-12 col-xs-12 margin-bottom40">Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis aute irure dolor in rep rehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. <br /><br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis aute irure dolor in rep rehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiumod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, do eiusmod tempor cididunt ut labore et dolore magna aliqua.</div>
+</div>
+<div class="title-cms"><span class="title h2">MEET OUR TEAM</span></div>
+<div class="profiles">
+<div class="row">
+<div class="profile col-md-3 col-sm-6 col-xs-12 col-xs-half row-2sm-first row-half-first">
+<div><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/profile_1.jpg"}}" alt="" /></a></div>
+<div class="profile-desc text-center"><a class="profile-name text-uppercase" href="#">David Miller</a>
+<p><span>CEO</span></p>
+<ul class="social-connected">
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="profile col-md-3 col-sm-6 col-xs-12 col-xs-half">
+<div><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/profile_2.jpg"}}" alt="" /></a></div>
+<div class="profile-desc text-center"><a class="profile-name text-uppercase" href="#">David Miller</a>
+<p><span>CEO</span></p>
+<ul class="social-connected">
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="profile col-md-3 col-sm-6 col-xs-12 col-xs-half row-2sm-first row-half-first">
+<div><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/profile_3.jpg"}}" alt="" /></a></div>
+<div class="profile-desc text-center"><a class="profile-name text-uppercase" href="#">David Miller</a>
+<p><span>CEO</span></p>
+<ul class="social-connected">
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+</div>
+</div>
+<div class="profile col-md-3 col-sm-6 col-xs-12 col-xs-half">
+<div><a href="#"><img class="img-responsive" src="{{media url="wysiwyg/profile_4.jpg"}}" alt="" /></a></div>
+<div class="profile-desc text-center"><a class="profile-name text-uppercase" href="#">David Miller</a>
+<p><span>CEO</span></p>
+<ul class="social-connected">
+<li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>]]></content>
+		</item>
+	</cms_page>
+	
+	<theme_setting>
+		<general>
+			<width>width1200</width>
+			<layout_style>0</layout_style>
+			<layout>wide</layout>
+			<header>header_1</header>
+			<footer>footer_1</footer>
+			<sticky_menu>1</sticky_menu>
+			<back_to_top>1</back_to_top>
+			<popup_newsletter>0</popup_newsletter>
+		</general>
+		<fonts>
+			<default_font><![CDATA[Lato]]></default_font>
+			<h1><![CDATA[Oswald]]></h1>
+			<h2><![CDATA[Oswald]]></h2>
+			<h3><![CDATA[Oswald]]></h3>
+			<h4><![CDATA[Oswald]]></h4>
+			<h5><![CDATA[Oswald]]></h5>
+			<h6><![CDATA[Oswald]]></h6>
+			<btn><![CDATA[Oswald]]></btn>
+			<price><![CDATA[Oswald]]></price>
+			<menu><![CDATA[Oswald]]></menu>
+			<menu_link><![CDATA[Oswald]]></menu_link>
+			<custom_fonts_element><![CDATA[.font-playfair]]></custom_fonts_element>
+			<custom_font_fml><![CDATA[Playfair+Display]]></custom_font_fml>
+		</fonts>
+	</theme_setting>
+	<panel_setting>
+		<catalog>
+			<product_per_row>3</product_per_row>
+			<max_width_image>400</max_width_image>
+			<max_width_image_detail>600</max_width_image_detail>
+			<sale_label><![CDATA[Sale]]></sale_label>
+			<new_label><![CDATA[New]]></new_label>
+			<picture_ratio>4</picture_ratio>
+		</catalog>
+		<form_mini_search>
+			<show_categories>1</show_categories>
+		</form_mini_search>
+		<contact_google_map>
+			<display_google_map>1</display_google_map>
+			<api_key><![CDATA[AIzaSyCy6gXonyMf_qiVPM50n0fJOdJQjIbGFP8]]></api_key>
+			<address_google_map><![CDATA[New York]]></address_google_map>
+			<html_google_map><![CDATA[<div class="infobox"><h3 class="title">Adella</h3><span>New York</span><br>NY, United States <br>+0123456789<p></p></div>]]></html_google_map>
+		</contact_google_map>
+	</panel_setting>
+</install>

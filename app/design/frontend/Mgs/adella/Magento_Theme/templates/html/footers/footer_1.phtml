@@ -1,0 +1,12 @@
+<?php $block = $this->getBlock() ?>
+<div id="footer1" class="footer-container footer-v1">
+	<div class="bottom-footer">
+		<div class="container">
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_social')->toHtml() ?>
+			<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('adella_footer_menu')->toHtml() ?>	
+			<address class="copy">
+				<span><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></span>
+			</address>
+		</div>
+	</div>
+</div>

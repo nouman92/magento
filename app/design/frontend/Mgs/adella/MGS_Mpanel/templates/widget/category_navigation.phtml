@@ -1,0 +1,33 @@
+<?php
+$categories = $this->getStoreCategories(true,false,true);
+$categoryHelper = $this->getCategoryHelper();
+$catagories_show = $this->getCategoriesShow();
+?>
+<div class="menu-scroll-block menu-home">
+		<div class="block-title">
+			<h4>
+				<?php if($this->getTitleBlock() != null): ?>
+					<?php echo $this->getTitleBlock(); ?>
+				<?php else: ?>
+					<?php echo __('Categories Navigation') ?>
+ 				<?php endif ?>
+			</h4>
+			<span class="sh-menu hidden-lg hidden-md"><i aria-hidden="true" class="fa fa-bars"></i></span>
+		</div>
+	<ul id="content-navigation" class="vertical-menu-widget scrollbar-inner">
+		<?php foreach($categories as $category): ?>
+			<?php if ($category->getIsActive() && in_array($category->getId(), $catagories_show)): ?>
+				<?php $childrenCategories = $this->getChildCategories($category) ?>
+				<li class="level0">
+					<a href="<?php echo $categoryHelper->getCategoryUrl($category) ?>"><?php echo $category->getName() ?></a>
+					<?php if($childrenCategories && $this->getSubCategoriesMenu($category->getId())): ?>
+						<?php echo $this->getChildCategoryHtml($childrenCategories,$category->getId()); ?>
+					<?php endif; ?>
+				</li>
+			<?php endif ?>
+		<?php endforeach; ?>
+	</ul>
+</div>
+<script type="text/javascript">
+	
+</script>

@@ -1,0 +1,72 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Category layered navigation
+ *
+ * @var $block \Magento\LayeredNavigation\Block\Navigation
+ */
+?>
+<?php $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');
+?>
+<?php 
+$themeHelper = $this->helper('MGS\Mpanel\Helper\Data');
+$design =  preg_replace('/\D/', '', $themeHelper->checkLayoutPage($category)->getPageLayout());?>
+<?php if ($block->canShowBlock()): ?>
+    <div class="block filter<?php if($design == '1'): ?> filter-one-column<?php endif;?>" <?php if($design == '1'): ?>id="filter-one-column"<?php endif;?>>
+        <div class="block-title filter-title">
+            <h4><?php /* @escapeNotVerified */ echo __('Shop By') ?></h4>
+        </div>
+
+        <div class="block-content filter-content">
+			<?php echo $block->getChildHtml('state') ?>
+
+            <?php if ($block->getLayer()->getState()->getFilters()): ?>
+                <div class="block-actions filter-actions">
+                    <a href="<?php /* @escapeNotVerified */ echo $block->getClearUrl() ?>" class="action clear filter-clear"><span class="pe-7s-trash"></span><?php /* @escapeNotVerified */ echo __('Clear All') ?></a>
+                </div>
+            <?php endif; ?>
+            <?php $wrapOptions = false; ?>
+            <?php $i=0; foreach ($block->getFilters() as $filter):  ?>
+                <?php if (!$wrapOptions): ?>
+                    <div class="filter-options <?php if($design == '1'): ?> row<?php endif;?>" id="narrow-by-list">
+                <?php $wrapOptions = true; endif; ?>
+                    <?php if ($filter->getItemsCount()): $i++; ?>
+						<div class="<?php if($design == '1'): ?> col-md-3 col-sm-6 col-xs-6 <?php if($i % 4 == 1): ?> first-row-item<?php endif ?><?php if($i % 2 == 1): ?> row-2sm-first<?php endif ?><?php if($i % 2 == 1): ?> row-2xs-first<?php endif ?><?php endif;?> form-group">					
+								<div aria-level="3" class="block-title"><span class="block-sub-title"><?php echo $block->escapeHtml(__($filter->getName())) ?></span></div>
+								<div class="block-content"><?php /* @escapeNotVerified */ echo $block->getChildBlock('renderer')->render($filter); ?></div>
+							
+						</div>
+                    <?php endif; ?>
+            <?php endforeach; ?>
+            <?php if ($wrapOptions): ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if($design == '1'): ?>
+<script type="text/javascript">
+		require([
+		'jquery'
+	], function(jQuery){
+		(function($) {
+			$(document).ready(function() {
+				$('#filter-one-column select').on('change', function() {
+					if(this.value != ""){
+						setLocation(this.value);
+					}
+				});
+			});
+		})(jQuery);
+	});
+</script>
+<?php endif; ?>

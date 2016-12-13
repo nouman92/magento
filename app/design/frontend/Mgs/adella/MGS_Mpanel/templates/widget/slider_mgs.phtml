@@ -1,0 +1,72 @@
+<?php $sliderId = rand() . time(); ?>
+<?php $animated = $this->getAnimateSlider(); ?>
+<?php $idenBlock = $this->getData('block_id'); ?>
+<?php if($idenBlock != null): ?>
+	<div id="mgs-slider-<?php echo $sliderId ?>" class="slider_mgs_carousel owl-carousel on-load <?php echo $this->getData('banner_class'); ?>" style="height: <?php echo $this->getHeightLoad(); ?>;">
+		<!-- Static block content -->
+		<?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($idenBlock)->toHtml();?>
+	</div>
+	<script type="text/javascript">
+		require([
+			'jquery',
+			'mgs/owlcarousel'
+		], function(jQuery){
+			(function($) {
+				$(window).load(function() {
+					// Stop Loading
+					setTimeout(removeLoading, 1500);
+					<?php if($this->checkFull()): ?>
+						fullHeight();
+					<?php endif ?>
+				});
+				<?php if($this->checkFull()): ?>
+				$(window).resize(function() {
+					fullHeight();
+				});
+				<?php endif ?>
+				// Slider Config
+				$("#mgs-slider-<?php echo $sliderId ?>").owlCarousel({
+					items: 1,
+					rtl: <?php echo $this->getRightToLeft(); ?>,
+					loop: <?php echo $this->getLoop(); ?>,
+					nav: <?php echo $this->getControlNav(); ?>,
+					dots: <?php echo $this->getControlDots(); ?>,
+					autoplayTimeout: <?php echo $this->getAutoSpeed(); ?>,
+					autoplay: <?php echo $this->getAutoPlay(); ?>,
+					animateOut: '<?php echo $animated['out'] ?>',
+					animateIn: '<?php echo $animated['in'] ?>',
+					navText: ["<i class='fa fa-arrow-left'></i>","<i class='fa fa-arrow-right'></i>"],
+					responsive: <?php echo $this->getConfigResponsive(); ?>
+				});
+			})(jQuery);
+		});
+		
+		//Stop Loading Function
+		function removeLoading() {
+			require([
+				'jquery'
+			], function (mgsjQuery) {
+				(function () {
+					mgsjQuery("#mgs-slider-<?php echo $sliderId ?>").removeClass('on-load');
+					mgsjQuery("#mgs-slider-<?php echo $sliderId ?>").removeAttr('style');
+				})(jQuery);
+			});
+		}
+		
+		//Function Full height
+		function fullHeight() {
+			require([
+				'jquery'
+			], function (mgsjQuery) {
+				(function () {
+					var heightScreen = mgsjQuery(window).height();
+					mgsjQuery("#mgs-slider-<?php echo $sliderId ?> .owl-item > div").height(heightScreen);
+				})(jQuery);
+			});
+		}
+	</script>
+<?php else: ?>
+	<div class="message-notice notice message">
+		<div><?php echo __('You need to input identifier for your slider.') ?></div>
+	</div>
+<?php endif ?>
