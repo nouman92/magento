@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b9899f5176ede26ff08daa886f20bfeb",
-    "content-hash": "c6ed9bfe96361d1aaddd83ad1936392a",
+    "hash": "e379cc0a58819bb54b0ab63a7742761a",
+    "content-hash": "06b478a7c46b80f44d7fde527a8ccb4c",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -402,6 +402,32 @@
             "time": "2016-09-28 07:17:45"
         },
         {
+            "name": "inchoo/stripe",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Inchoo/magento2-Inchoo_Stripe.git",
+                "reference": "d9513d420735d93192f5fea1fad5a6d7a23ccdec"
+            },
+            "require": {
+                "stripe/stripe-php": "2.*"
+            },
+            "type": "magento2-module",
+            "extra": {
+                "map": [
+                    [
+                        "*",
+                        "Inchoo/Stripe"
+                    ]
+                ]
+            },
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Stripe integration for Magento 2",
+            "time": "2016-06-25 14:57:40"
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "1.6.1",
             "source": {
@@ -519,11 +545,6 @@
         {
             "name": "magento/composer",
             "version": "1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/magento/composer.git",
-                "reference": "b53f7c8a037860b467083e94de7c17cfd323e365"
-            },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/magento/composer/zipball/b53f7c8a037860b467083e94de7c17cfd323e365",
@@ -5866,6 +5887,61 @@
             "time": "2014-09-22 08:40:36"
         },
         {
+            "name": "stripe/stripe-php",
+            "version": "v2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "9d76444550a09a6f9c55dd98113ba0901908e60a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/9d76444550a09a6f9c55dd98113ba0901908e60a",
+                "reference": "9d76444550a09a6f9c55dd98113ba0901908e60a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2015-07-07 01:13:32"
+        },
+        {
             "name": "symfony/console",
             "version": "v2.6.13",
             "target-dir": "Symfony/Component/Console",
@@ -9122,6 +9198,7 @@
     "minimum-stability": "alpha",
     "stability-flags": {
         "composer/composer": 15,
+        "inchoo/stripe": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,
