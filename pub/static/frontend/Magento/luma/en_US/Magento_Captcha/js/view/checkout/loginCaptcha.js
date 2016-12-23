@@ -1,1 +1,0 @@
-/opt/lampstack-5.5.31-0/apache2/htdocs/magento/vendor/magento/module-captcha/view/frontend/web/js/view/checkout/loginCaptcha.js
