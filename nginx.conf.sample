@@ -1,22 +1,26 @@
-# Magento Vars
-# set $MAGE_ROOT /path/to/magento/root;
-# set $MAGE_MODE default; # or production or developer
-#
-# Example configuration:
-# upstream fastcgi_backend {
+#upstream fastcgi_backend {
 #    # use tcp connection
-#    # server  127.0.0.1:9000;
+#    server  127.0.0.1:9000;
 #    # or socket
-#    server   unix:/var/run/php5-fpm.sock;
-# }
-# server {
-#    listen 80;
-#    server_name mage.dev;
-#    set $MAGE_ROOT /var/www/magento2;
+#    #server   unix:/var/run/php5-fpm.sock;
+#}
+#server {
+#    listen   80;
+#    server_name store.noumananjum.com;
+#    return 301 https://store.noumananjum.com$request_uri;
+#}
+#server {
+#    listen       443 http2 ssl;
+#    listen       [::]:443 http2 ssl;
+#    index index.php index.html index.htm;
+#    server_name store.noumananjum.com;
+#    ssl_certificate "/usr/share/nginx/html/certs/noumananjum/noumananjum.crt";
+#    ssl_certificate_key "/usr/share/nginx/html/certs/noumananjum/noumananjum.key";
+    
+#    set $MAGE_ROOT /usr/share/nginx/html/magento/;
 #    set $MAGE_MODE developer;
-#    include /vagrant/magento2/nginx.conf.sample;
-# }
-
+#    include /usr/share/nginx/html/magento/nginx.conf.sample;
+#}
 
 root $MAGE_ROOT/pub;
 

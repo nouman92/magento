@@ -1,0 +1,17 @@
+<span class="text-danger">[ERROR] exception 'LogicException' with message 'Unknown module in the requested list: 'Inchoo_Stripe'' in /usr/share/nginx/html/magento/setup/src/Magento/Setup/Model/Installer.php:417
+Stack trace:
+#0 /usr/share/nginx/html/magento/setup/src/Magento/Setup/Model/Installer.php(378): Magento\Setup\Model\Installer->readListOfModules(Array, Array, 'enable_modules')
+#1 /usr/share/nginx/html/magento/setup/src/Magento/Setup/Model/Installer.php(325): Magento\Setup\Model\Installer->createModulesConfig(Array)
+#2 /usr/share/nginx/html/magento/setup/src/Magento/Setup/Controller/Install.php(103): Magento\Setup\Model\Installer->install(Array)
+#3 /usr/share/nginx/html/magento/vendor/zendframework/zend-mvc/src/Controller/AbstractActionController.php(82): Magento\Setup\Controller\Install->startAction()
+#4 [internal function]: Zend\Mvc\Controller\AbstractActionController->onDispatch(Object(Zend\Mvc\MvcEvent))
+#5 /usr/share/nginx/html/magento/vendor/zendframework/zend-eventmanager/src/EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#6 /usr/share/nginx/html/magento/vendor/zendframework/zend-eventmanager/src/EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#7 /usr/share/nginx/html/magento/vendor/zendframework/zend-mvc/src/Controller/AbstractController.php(118): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#8 /usr/share/nginx/html/magento/vendor/zendframework/zend-mvc/src/DispatchListener.php(93): Zend\Mvc\Controller\AbstractController->dispatch(Object(Zend\Http\PhpEnvironment\Request), Object(Zend\Http\PhpEnvironment\Response))
+#9 [internal function]: Zend\Mvc\DispatchListener->onDispatch(Object(Zend\Mvc\MvcEvent))
+#10 /usr/share/nginx/html/magento/vendor/zendframework/zend-eventmanager/src/EventManager.php(444): call_user_func(Array, Object(Zend\Mvc\MvcEvent))
+#11 /usr/share/nginx/html/magento/vendor/zendframework/zend-eventmanager/src/EventManager.php(205): Zend\EventManager\EventManager->triggerListeners('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#12 /usr/share/nginx/html/magento/vendor/zendframework/zend-mvc/src/Application.php(314): Zend\EventManager\EventManager->trigger('dispatch', Object(Zend\Mvc\MvcEvent), Object(Closure))
+#13 /usr/share/nginx/html/magento/setup/index.php(31): Zend\Mvc\Application->run()
+#14 {main}<span><br>
