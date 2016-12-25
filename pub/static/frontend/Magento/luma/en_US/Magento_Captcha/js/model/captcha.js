@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/vendor/magento/module-captcha/view/frontend/web/js/model/captcha.js

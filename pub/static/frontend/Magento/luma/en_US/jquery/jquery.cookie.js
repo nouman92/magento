@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/lib/web/jquery/jquery.cookie.js

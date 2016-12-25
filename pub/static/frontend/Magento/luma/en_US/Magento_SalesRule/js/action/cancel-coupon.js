@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/vendor/magento/module-sales-rule/view/frontend/web/js/action/cancel-coupon.js

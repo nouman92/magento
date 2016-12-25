@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/vendor/magento/module-payment/view/frontend/web/js/view/payment/method-renderer/free-method.js

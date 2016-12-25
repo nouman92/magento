@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/lib/web/mage/requirejs/text.js
