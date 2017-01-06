@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/vendor/magento/module-integration/view/adminhtml/web/js/integration.js

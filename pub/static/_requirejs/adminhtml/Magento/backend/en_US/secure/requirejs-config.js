@@ -269,24 +269,6 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            braintree:                  'https://js.braintreegateway.com/v2/braintree.js',
-            braintreeCcForm:            'Magento_Braintree/js/cc-form',
-            braintreeDataJs:            'Magento_Braintree/js/cc-data'
-        }
-    }
-};
-
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
-    map: {
-        '*': {
             integration: 'Magento_Integration/js/integration'
         }
     } 
@@ -318,42 +300,10 @@ require.config(config);
 var config = {
     map: {
         '*': {
-            transparent:            'Magento_Payment/transparent'
-        }
-    }
-};
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
-
-var config = {
-    map: {
-        '*': {
             fptAttribute: 'Magento_Weee/js/fpt-attribute'
         }
     }
 };
-require.config(config);
-})();
-(function() {
-/**
- * Copyright © 2016 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
-/*eslint no-unused-vars: 0*/
-var config = {
-    map: {
-        '*': {
-            newVideoDialog:  'Magento_ProductVideo/js/new-video-dialog',
-            openVideoModal:  'Magento_ProductVideo/js/video-modal'
-        }
-    }
-};
-
 require.config(config);
 })();
 (function() {

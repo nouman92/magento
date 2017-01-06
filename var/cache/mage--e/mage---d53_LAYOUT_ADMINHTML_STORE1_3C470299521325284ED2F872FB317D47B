@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482688343;s:6:"expire";i:9999999999;s:4:"tags";s:74:"d53_DEFAULT,d53_ADMINHTML_AUTH_LOGIN,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482770119;s:6:"expire";i:9999999999;s:4:"tags";s:74:"d53_DEFAULT,d53_ADMINHTML_AUTH_LOGIN,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
 <head>
    <title>Magento Admin</title>
    <meta name="viewport" content="width=1024, initial-scale=1"/>
@@ -150,20 +150,5 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482688343;s:6:"expire";i:9999999999;s:4:"t
 <body>
    <referenceContainer name="form.buttons">
       <block class="Magento\Backend\Block\Template" name="adminhtml_auth_login_forgotpassword" template="Magento_User::admin/forgotpassword_url.phtml"/>
-   </referenceContainer>
-</body>
-<body>
-   <referenceContainer name="form.additional.info">
-      <block class="Magento\Captcha\Block\Captcha" name="captcha" cacheable="false">
-         <action method="setFormId">
-            <argument name="formId" xsi:type="string">backend_login</argument>
-         </action>
-         <action method="setImgWidth">
-            <argument name="width" xsi:type="string">226</argument>
-         </action>
-         <action method="setImgHeight">
-            <argument name="width" xsi:type="string">50</argument>
-         </action>
-      </block>
    </referenceContainer>
 </body>

@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/lib/web/tiny_mce/tiny_mce_src.js

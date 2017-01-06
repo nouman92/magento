@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"tags";s:73:"d53_DEFAULT,d53_SALES_ORDER_HISTORY,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482705567;s:6:"expire";i:9999999999;s:4:"tags";s:73:"d53_DEFAULT,d53_SALES_ORDER_HISTORY,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
 <body>
    <referenceContainer name="header.panel">
       <block class="Magento\Directory\Block\Currency" name="currency" before="store_language" template="currency.phtml"/>
@@ -387,34 +387,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
       </arguments>
    </referenceBlock>
 </body>
-<body>
-   <referenceBlock name="minicart">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="minicart_content" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="subtotal.container" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="subtotal" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="subtotal.totals" xsi:type="array">
-                                    <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/minicart/subtotal/totals</item>
-                                    <item name="config" xsi:type="array">
-                                       <item name="template" xsi:type="string">Magento_Tax/checkout/minicart/subtotal/totals</item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
 <update handle="checkout_cart_sidebar_item_renderers"/>
 <update handle="checkout_cart_sidebar_item_price_renderers"/>
 <update handle="checkout_cart_sidebar_total_renderers"/>
@@ -469,11 +441,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
    </referenceContainer>
 </body>
 <body>
-   <referenceContainer name="after.body.start">
-      <block class="Magento\GoogleAnalytics\Block\Ga" name="google_analytics" as="google_analytics" template="ga.phtml"/>
-   </referenceContainer>
-</body>
-<body>
    <referenceBlock name="head.components">
       <block class="Magento\Framework\View\Element\Js\Components" name="newsletter_head_components" template="Magento_Newsletter::js/components.phtml"/>
    </referenceBlock>
@@ -488,26 +455,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
    <referenceContainer name="content">
       <block class="Magento\PageCache\Block\Javascript" template="Magento_PageCache::javascript.phtml" name="pageCache" as="pageCache"/>
    </referenceContainer>
-</body>
-<body>
-   <referenceBlock name="authentication-popup">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="authenticationPopup" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="captcha" xsi:type="array">
-                        <item name="component" xsi:type="string">Magento_Captcha/js/view/checkout/loginCaptcha</item>
-                        <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
-                        <item name="formId" xsi:type="string">user_login</item>
-                        <item name="configSource" xsi:type="string">checkout</item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
 </body>
 <body/>
 <body>
@@ -529,17 +476,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
 <body>
    <referenceContainer name="after.body.start">
       <block class="Magento\Ui\Block\Logger" name="logger" template="Magento_Ui::logger.phtml"/>
-   </referenceContainer>
-</body>
-<body>
-   <referenceBlock name="head.components">
-      <block class="Magento\Framework\View\Element\Js\Components" name="wishlist_page_head_components" template="Magento_Wishlist::js/components.phtml"/>
-   </referenceBlock>
-   <referenceBlock name="top.links">
-      <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="my-account-link"/>
-   </referenceBlock>
-   <referenceContainer name="sidebar.additional">
-      <block class="Magento\Wishlist\Block\Customer\Sidebar" name="wishlist_sidebar" as="wishlist" template="Magento_Wishlist::sidebar.phtml"/>
    </referenceContainer>
 </body>
 <body>
@@ -674,30 +610,10 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
 </body>
 <body>
    <referenceBlock name="customer_account_navigation">
-      <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-downloadable-products-link">
-         <arguments>
-            <argument name="path" xsi:type="string">downloadable/customer/products</argument>
-            <argument name="label" xsi:type="string">My Downloadable Products</argument>
-         </arguments>
-      </block>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="customer_account_navigation">
       <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-orders-link">
          <arguments>
             <argument name="path" xsi:type="string">sales/order/history</argument>
             <argument name="label" translate="true" xsi:type="string">My Orders</argument>
-         </arguments>
-      </block>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="customer_account_navigation">
-      <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-my-credit-cards" ifconfig="payment/braintree/use_vault">
-         <arguments>
-            <argument name="path" xsi:type="string">braintree/creditcard/index</argument>
-            <argument name="label" xsi:type="string">My Credit Cards</argument>
          </arguments>
       </block>
    </referenceBlock>
@@ -712,35 +628,12 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482699804;s:6:"expire";i:9999999999;s:4:"t
       </block>
    </referenceBlock>
 </body>
-<head>
-   <title>Billing Agreements</title>
-</head>
-<body>
-   <referenceBlock name="customer_account_navigation">
-      <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-billing-agreements-link">
-         <arguments>
-            <argument name="path" xsi:type="string">paypal/billing_agreement</argument>
-            <argument name="label" translate="true" xsi:type="string">Billing Agreements</argument>
-         </arguments>
-      </block>
-   </referenceBlock>
-</body>
 <body>
    <referenceBlock name="customer_account_navigation">
       <block class="Magento\Framework\View\Element\Html\Link\Current" name="customer-account-navigation-product-reviews-link">
          <arguments>
             <argument name="path" xsi:type="string">review/customer</argument>
             <argument name="label" xsi:type="string">My Product Reviews</argument>
-         </arguments>
-      </block>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="customer_account_navigation">
-      <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="wishlist/general/active" name="customer-account-navigation-wish-list-link">
-         <arguments>
-            <argument name="path" xsi:type="string">wishlist</argument>
-            <argument name="label" xsi:type="string">My Wish List</argument>
          </arguments>
       </block>
    </referenceBlock>

@@ -1,4 +1,4 @@
-a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"tags";s:74:"d53_DEFAULT,d53_CHECKOUT_INDEX_INDEX,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482704425;s:6:"expire";i:9999999999;s:4:"tags";s:74:"d53_DEFAULT,d53_CHECKOUT_INDEX_INDEX,d53_LAYOUT_GENERAL_CACHE_TAG,d53_MAGE";}
 <body>
    <referenceContainer name="header.panel">
       <block class="Magento\Directory\Block\Currency" name="currency" before="store_language" template="currency.phtml"/>
@@ -387,34 +387,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
       </arguments>
    </referenceBlock>
 </body>
-<body>
-   <referenceBlock name="minicart">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="minicart_content" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="subtotal.container" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="subtotal" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="subtotal.totals" xsi:type="array">
-                                    <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/minicart/subtotal/totals</item>
-                                    <item name="config" xsi:type="array">
-                                       <item name="template" xsi:type="string">Magento_Tax/checkout/minicart/subtotal/totals</item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
 <update handle="checkout_cart_sidebar_item_renderers"/>
 <update handle="checkout_cart_sidebar_item_price_renderers"/>
 <update handle="checkout_cart_sidebar_total_renderers"/>
@@ -469,11 +441,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
    </referenceContainer>
 </body>
 <body>
-   <referenceContainer name="after.body.start">
-      <block class="Magento\GoogleAnalytics\Block\Ga" name="google_analytics" as="google_analytics" template="ga.phtml"/>
-   </referenceContainer>
-</body>
-<body>
    <referenceBlock name="head.components">
       <block class="Magento\Framework\View\Element\Js\Components" name="newsletter_head_components" template="Magento_Newsletter::js/components.phtml"/>
    </referenceBlock>
@@ -488,26 +455,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
    <referenceContainer name="content">
       <block class="Magento\PageCache\Block\Javascript" template="Magento_PageCache::javascript.phtml" name="pageCache" as="pageCache"/>
    </referenceContainer>
-</body>
-<body>
-   <referenceBlock name="authentication-popup">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="authenticationPopup" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="captcha" xsi:type="array">
-                        <item name="component" xsi:type="string">Magento_Captcha/js/view/checkout/loginCaptcha</item>
-                        <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
-                        <item name="formId" xsi:type="string">user_login</item>
-                        <item name="configSource" xsi:type="string">checkout</item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
 </body>
 <body/>
 <body>
@@ -529,17 +476,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
 <body>
    <referenceContainer name="after.body.start">
       <block class="Magento\Ui\Block\Logger" name="logger" template="Magento_Ui::logger.phtml"/>
-   </referenceContainer>
-</body>
-<body>
-   <referenceBlock name="head.components">
-      <block class="Magento\Framework\View\Element\Js\Components" name="wishlist_page_head_components" template="Magento_Wishlist::js/components.phtml"/>
-   </referenceBlock>
-   <referenceBlock name="top.links">
-      <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="my-account-link"/>
-   </referenceBlock>
-   <referenceContainer name="sidebar.additional">
-      <block class="Magento\Wishlist\Block\Customer\Sidebar" name="wishlist_sidebar" as="wishlist" template="Magento_Wishlist::sidebar.phtml"/>
    </referenceContainer>
 </body>
 <body>
@@ -731,73 +667,7 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
    </referenceBlock>
 </body>
 <body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="step-config" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="shipping-rates-validation" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="dhl-rates-validation" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Dhl/js/view/shipping-rates-validation</item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
    <referenceBlock name="sale.reorder.sidebar" remove="true"/>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="step-config" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="shipping-rates-validation" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="fedex-rates-validation" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Fedex/js/view/shipping-rates-validation</item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
 </body>
 <body>
    <referenceContainer name="content">
@@ -1224,141 +1094,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
                   <item name="children" xsi:type="array">
                      <item name="steps" xsi:type="array">
                         <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="shippingAddress" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="price" xsi:type="array">
-                                          <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/shipping_method/price</item>
-                                          <item name="displayArea" xsi:type="string">price</item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                     <item name="sidebar" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="summary" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="totals" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="subtotal" xsi:type="array">
-                                          <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/subtotal</item>
-                                          <item name="config" xsi:type="array">
-                                             <item name="excludingTaxMessage" translate="true" xsi:type="string">Excl. Tax</item>
-                                             <item name="includingTaxMessage" translate="true" xsi:type="string">Incl. Tax</item>
-                                          </item>
-                                       </item>
-                                       <item name="shipping" xsi:type="array">
-                                          <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/shipping</item>
-                                          <item name="sortOrder" xsi:type="string">20</item>
-                                          <item name="config" xsi:type="array">
-                                             <item name="excludingTaxMessage" translate="true" xsi:type="string">Excl. Tax</item>
-                                             <item name="includingTaxMessage" translate="true" xsi:type="string">Incl. Tax</item>
-                                          </item>
-                                       </item>
-                                       <item name="before_grandtotal" xsi:type="array">
-                                          <item name="component" xsi:type="string">uiComponent</item>
-                                          <item name="sortOrder" xsi:type="string">30</item>
-                                          <item name="children" xsi:type="array">
-                                                                
-                                                            </item>
-                                       </item>
-                                       <item name="tax" xsi:type="array">
-                                          <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/tax</item>
-                                          <item name="config" xsi:type="array">
-                                             <item name="title" translate="true" xsi:type="string">Tax</item>
-                                          </item>
-                                       </item>
-                                       <item name="grand-total" xsi:type="array">
-                                          <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/grand-total</item>
-                                          <item name="config" xsi:type="array">
-                                             <item name="exclTaxLabel" translate="true" xsi:type="string">Order Total Excl. Tax</item>
-                                             <item name="inclTaxLabel" translate="true" xsi:type="string">Order Total Incl. Tax</item>
-                                             <item name="basicCurrencyMessage" translate="true" xsi:type="string">Your credit card will be charged for</item>
-                                             <item name="title" translate="true" xsi:type="string">Order Total</item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                                 <item name="cart_items" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="details" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="subtotal" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Tax/js/view/checkout/summary/item/details/subtotal</item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="billing-step" xsi:type="array">
-                              <item name="component" xsi:type="string">uiComponent</item>
-                              <item name="children" xsi:type="array">
-                                 <item name="payment" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="renders" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="braintree-payments" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Braintree/js/view/payment/braintree-methods</item>
-                                                <item name="methods" xsi:type="array">
-                                                   <item name="braintree" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                   <item name="braintree_paypal" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">false</item>
-                                                   </item>
-                                                </item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-   <referenceBlock name="content">
-      <block class="Magento\Braintree\Block\Datajs" name="braintree_data_js2" template="data_js.phtml"/>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
                            <item name="billing-step" xsi:type="array">
                               <item name="children" xsi:type="array">
                                  <item name="payment" xsi:type="array">
@@ -1502,129 +1237,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
             <item name="components" xsi:type="array">
                <item name="checkout" xsi:type="array">
                   <item name="children" xsi:type="array">
-                     <item name="authentication" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="captcha" xsi:type="array">
-                              <item name="component" xsi:type="string">Magento_Captcha/js/view/checkout/loginCaptcha</item>
-                              <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
-                              <item name="formId" xsi:type="string">user_login</item>
-                              <item name="configSource" xsi:type="string">checkoutConfig</item>
-                           </item>
-                        </item>
-                     </item>
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="shippingAddress" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="customer-email" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="additional-login-form-fields" xsi:type="array">
-                                                <item name="children" xsi:type="array">
-                                                   <item name="captcha" xsi:type="array">
-                                                      <item name="component" xsi:type="string">Magento_Captcha/js/view/checkout/loginCaptcha</item>
-                                                      <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
-                                                      <item name="formId" xsi:type="string">guest_checkout</item>
-                                                      <item name="configSource" xsi:type="string">checkoutConfig</item>
-                                                   </item>
-                                                </item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                           <item name="billing-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="payment" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="customer-email" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="additional-login-form-fields" xsi:type="array">
-                                                <item name="children" xsi:type="array">
-                                                   <item name="captcha" xsi:type="array">
-                                                      <item name="component" xsi:type="string">Magento_Captcha/js/view/checkout/loginCaptcha</item>
-                                                      <item name="displayArea" xsi:type="string">additional-login-form-fields</item>
-                                                      <item name="formId" xsi:type="string">guest_checkout</item>
-                                                      <item name="configSource" xsi:type="string">checkoutConfig</item>
-                                                   </item>
-                                                </item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="billing-step" xsi:type="array">
-                              <item name="component" xsi:type="string">uiComponent</item>
-                              <item name="children" xsi:type="array">
-                                 <item name="payment" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="renders" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="paypal-payments" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Paypal/js/view/payment/paypal-payments</item>
-                                                <item name="methods" xsi:type="array">
-                                                   <item name="payflowpro" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                   <item name="payflow_link" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                   <item name="payflow_advanced" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                   <item name="hosted_pro" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                   <item name="paypal_billing_agreement" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                </item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
                      <item name="sidebar" xsi:type="array">
                         <item name="children" xsi:type="array">
                            <item name="summary" xsi:type="array">
@@ -1679,45 +1291,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
                   <item name="children" xsi:type="array">
                      <item name="steps" xsi:type="array">
                         <item name="children" xsi:type="array">
-                           <item name="billing-step" xsi:type="array">
-                              <item name="component" xsi:type="string">uiComponent</item>
-                              <item name="children" xsi:type="array">
-                                 <item name="payment" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="renders" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="authorizenet" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Authorizenet/js/view/payment/authorizenet</item>
-                                                <item name="methods" xsi:type="array">
-                                                   <item name="authorizenet_directpost" xsi:type="array">
-                                                      <item name="isBillingAddressRequired" xsi:type="boolean">true</item>
-                                                   </item>
-                                                </item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
                            <item name="shipping-step" xsi:type="array">
                               <item name="children" xsi:type="array">
                                  <item name="shippingAddress" xsi:type="array">
@@ -1726,72 +1299,6 @@ a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1482689141;s:6:"expire";i:9999999999;s:4:"t
                                           <item name="children" xsi:type="array">
                                              <item name="shipping_policy" xsi:type="array">
                                                 <item name="component" xsi:type="string">Magento_Shipping/js/view/checkout/shipping/shipping-policy</item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="step-config" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="shipping-rates-validation" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="ups-rates-validation" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Ups/js/view/shipping-rates-validation</item>
-                                             </item>
-                                          </item>
-                                       </item>
-                                    </item>
-                                 </item>
-                              </item>
-                           </item>
-                        </item>
-                     </item>
-                  </item>
-               </item>
-            </item>
-         </argument>
-      </arguments>
-   </referenceBlock>
-</body>
-<body>
-   <referenceBlock name="checkout.root">
-      <arguments>
-         <argument name="jsLayout" xsi:type="array">
-            <item name="components" xsi:type="array">
-               <item name="checkout" xsi:type="array">
-                  <item name="children" xsi:type="array">
-                     <item name="steps" xsi:type="array">
-                        <item name="children" xsi:type="array">
-                           <item name="shipping-step" xsi:type="array">
-                              <item name="children" xsi:type="array">
-                                 <item name="step-config" xsi:type="array">
-                                    <item name="children" xsi:type="array">
-                                       <item name="shipping-rates-validation" xsi:type="array">
-                                          <item name="children" xsi:type="array">
-                                             <item name="usps-rates-validation" xsi:type="array">
-                                                <item name="component" xsi:type="string">Magento_Usps/js/view/shipping-rates-validation</item>
                                              </item>
                                           </item>
                                        </item>

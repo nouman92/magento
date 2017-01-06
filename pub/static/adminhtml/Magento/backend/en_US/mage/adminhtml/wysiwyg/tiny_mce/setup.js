@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/lib/web/mage/adminhtml/wysiwyg/tiny_mce/setup.js

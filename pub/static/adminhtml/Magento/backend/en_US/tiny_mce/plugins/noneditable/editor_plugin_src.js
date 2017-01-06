@@ -1,0 +1,1 @@
+/usr/share/nginx/html/magento/lib/web/tiny_mce/plugins/noneditable/editor_plugin_src.js
