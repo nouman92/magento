@@ -33,15 +33,15 @@
         <resources>
             <default_setup>
                 <connection>
-                    <host>localhost</host>
-                    <username/>
-                    <password/>
-                    <dbname>magento</dbname>
-                    <model>mysql4</model>
-                    <initStatements>SET NAMES utf8</initStatements>
-                    <type>pdo_mysql</type>
-                    <active>0</active>
-                    <persistent>0</persistent>
+                    <host><![CDATA[fashiontime.c4wrdesrpkah.ap-south-1.rds.amazonaws.com:3306]]></host>
+                    <username><![CDATA[fashiontime]]></username>
+                    <password><![CDATA[fashiontime]]></password>
+		    <dbname><![CDATA[magentostoredb]]></dbname>
+                   <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
+    	            <model><![CDATA[mysql4]]></model>
+    <type><![CDATA[pdo_mysql]]></type>
+    <pdoType><![CDATA[]]></pdoType>
+    <active>1</active>
                 </connection>
             </default_setup>
             <default_write>
