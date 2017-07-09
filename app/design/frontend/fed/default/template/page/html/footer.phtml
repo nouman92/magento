@@ -1,0 +1,68 @@
+<br/><br/>
+
+<div class="row" style="background-color: #333333;">
+
+<div class="col-md-12 footer_first">    
+
+<div class="container">
+
+        <div class="newsletter foot_pipe col-md-3">
+
+       <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?> 
+
+        </div>
+
+
+
+<div class="newsletter foot_pipe col-md-3">
+ <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_facebook')->toHtml() ?> 
+
+ </div>
+
+
+
+<div class="newsletter foot_pipe col-md-3">
+
+ <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('featured_brands')->toHtml() ?> 
+
+ </div>
+
+
+
+ <div class="newsletter foot_pipe col-md-3">
+
+<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_contact')->toHtml() ?> 
+
+ </div>
+
+
+
+        </div>
+
+   
+
+</div>           
+
+
+
+<div class="footer_second col-md-12">
+
+<div class="container">
+
+<p align="center" style="padding-top:6px;">
+
+<span style="color:#fff"><?php echo $this->getCopyright() ?></span> 
+
+
+<span style="color:#fff"><?php echo $this->__('Designed by') ?><a style="color: #fff" href="http://www.fedobe.com"   
+
+onclick="this.target='_blank'"> <?php echo '<b>'.$this->__('Fedobe').'</b>' ?></a></span>
+
+</p>
+
+
+
+</div>
+
+</div>
+

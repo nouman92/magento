@@ -1,0 +1,153 @@
+<?php
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   TCS
+ * @package    Tcs_Codshippingbooking
+ * @copyright  Copyright (c) 2015 TCS (Pvt) Ltd.
+ * @author	   TCS Developer <kamran.haider@tcs-e.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+?>
+<?php $data = $this->getFormData();  ?>
+<div style="" id="">
+  <div class="entry-edit">
+    <div class="entry-edit-head">
+      <h4 class="icon-head head-edit-form fieldset-legend">Review Booking Information</h4>
+      <div class="form-buttons"></div>
+    </div>
+    <div id="_accountbase_fieldset" class="fieldset ">
+      <div class="hor-scroll">
+      	<form name="cod_shipping_booking" id="codShippingBooking" action="<?php echo $this->getFormAction()?>">
+        <input type="hidden" name="booking[order_id]" id="orderId" value="<?php echo $data['order_id']?>" />
+        <table cellspacing="0" class="form-list">
+          <tbody>
+          	<tr><td colspan="2" style="color:red;">Plesae review the information you have entered, to confirm please click continue or click back to make the corrections.</td></tr>
+          	<tr>
+              <td class="label"><label for=""></label></td>
+              <td class="value"><input type="hidden" name="booking[costCenterCode]" id="costCenterCode" value="<?php echo $data['costCenterCode']?>" /></td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Consignee Name<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['consigneeName']?>
+                  <input type="hidden"  class="required-entry input-text" value="<?php echo $data['consigneeName']?>" name="booking[consigneeName]" id="consigneeName">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Consignee Address<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['consigneeAddress']?>
+              		<input type="hidden" name="booking[consigneeAddress]" id="consigneeAddress" class="required-entry textarea" value="<?php echo $data['consigneeAddress']?>">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Consignee Mobile No.<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['consigneeMobNo']?>
+                  <input type="hidden"  class="required-entry input-text" value="<?php echo $data['consigneeMobNo']?>" name="booking[consigneeMobNo]" id="consigneeMobNo">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Consignee Email</label></td>
+              <td class="value"><?php echo $data['consigneeEmail']?>
+                  <input type="hidden"  class=" input-text" value="<?php echo $data['consigneeEmail']?>" name="booking[consigneeEmail]" id="consigneeEmail">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Origin City Name</label></td>
+              <td class="value"><?php echo $data['originCityName']?>
+                  <input type="hidden" name="booking[originCityName]" id="originCityName" value="<?php echo $data['originCityName']?>" />
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Destination City Name<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['destinationCityName']?>
+              		<input type="hidden" name="booking[destinationCityName]" id="destinationCityName" class="required-entry select" value="<?php echo $data['destinationCityName']?>"><br />
+                  
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Pieces</label></td>
+              <td class="value"><?php echo $data['pieces']?>
+                  <input type="hidden"  class=" input-text" value="<?php echo $data['pieces']?>" name="booking[pieces]" id="pieces">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Weight(in kg.)<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['weight']?>
+                  <input type="hidden"  class="required-entry input-text" value="<?php echo $data['weight']?>" name="booking[weight]" id="weight">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">COD Amount<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['codAmount']?>
+                  <input type="hidden"  class="required-entry input-text" value="<?php echo $data['codAmount']?>" name="booking[codAmount]" id="codAmount">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Customer Reference No.</label></td>
+              <td class="value"><?php echo $data['custRefNo']?>
+                  <input type="hidden"  class=" input-text" value="<?php echo $data['custRefNo']?>" name="booking[custRefNo]" id="custRefNo">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Product Details</label></td>
+              <td class="value"><?php echo $data['productDetails']?>
+                  <input type="hidden" name="booking[productDetails]" id="productDetails" value="<?php echo $data['productDetails']?>" />
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Fragile<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['fragile']?>
+                  <input type="hidden" class="required-entry select" name="booking[fragile]" id="fragile" value="<?php echo $data['fragile']?>" />
+                  
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Service<span class="required">*</span></label></td>
+              <td class="value"><?php echo $data['servicesLabel']?>
+                  <input type="hidden" class="required-entry select" name="booking[services]" id="services" value="<?php echo $data['services']?>">
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Remarks</label></td>
+              <td class="value"><?php echo $data['remarks']?>
+                  <input type="hidden" name="booking[remarks]" id="remarks" value="<?php echo $data['remarks']?>"  />
+              </td>
+            </tr>
+            <tr>
+              <td class="label"><label for="">Insurance Value</label></td>
+              <td class="value"><?php echo $data['insuranceValue']?>
+                  <input type="hidden"  class=" input-text" value="<?php echo $data['insuranceValue']?>" name="booking[insuranceValue]" id="insuranceValue">
+              </td>
+            </tr>
+            <tr>
+            	<td></td>
+              <td>
+              	<button style="" onclick="codShippingBooking.submit();" class="scalable save" type="button" title="Save Customer" ><span>Continue</span></button>
+                <button style="" onclick="history.back();" class="scalable save" type="button" title="Save Customer" ><span>Back</span></button>
+              </td>
+            </tr>
+            <tr> </tr>
+          </tbody>
+        </table>
+        </form>
+        <script type="text/javascript">
+						//< ![CDATA[
+								var customForm = new varienForm('codShippingBooking');
+								var validator = new Validation('codShippingBooking', {immediate : true});
+validator.validate()
+						//]]>
+				</script>
+      </div>
+    </div>
+  </div>
+</div>

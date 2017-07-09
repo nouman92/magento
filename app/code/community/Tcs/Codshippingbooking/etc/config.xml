@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   TCS
+ * @package    Tcs_Codshippingbooking
+ * @copyright  Copyright (c) 2015 TCS (Pvt) Ltd.
+ * @author	   TCS Developer <kamran.haider@tcs-e.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+-->
+<config>
+  <modules>
+    <Tcs_Codshippingbooking>
+      <version>0.0.7</version>
+    </Tcs_Codshippingbooking>
+  </modules>
+  <global>
+    <helpers>
+      <codshippingbooking>
+        <class>Tcs_Codshippingbooking_Helper</class>
+      </codshippingbooking>
+    </helpers>
+		<models>
+			<codshippingbooking>
+					<class>Tcs_Codshippingbooking_Model</class>
+			</codshippingbooking>
+		</models>
+		<blocks>
+			<codshippingbooking>
+				<class>Tcs_Codshippingbooking_Block</class>
+			</codshippingbooking>
+		</blocks>
+  </global>
+	<admin>
+		<routers>
+			<tcs_codshippingbooking>
+				<use>admin</use>
+				<args>
+					<module>Tcs_Codshippingbooking</module>
+					<frontName>admin_codshippingbooking</frontName>
+				</args>
+			</tcs_codshippingbooking>
+		</routers>
+	</admin>
+	<adminhtml>
+		<layout>
+			<updates>
+				<codshippingbooking>
+					<file>codshippingbooking.xml</file>
+				</codshippingbooking>
+			</updates>
+		</layout>
+	</adminhtml>
+</config> 

@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   TCS
+ * @package    Tcs_Codshippingbooking
+ * @copyright  Copyright (c) 2015 TCS (Pvt) Ltd.
+ * @author	   TCS Developer <kamran.haider@tcs-e.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+-->
+<config>
+  <tabs>
+    <tcs translate="label" module="codshippingbooking">
+      <label>TCS C.O.D Shipping Booking</label>
+      <sort_order>301</sort_order>
+    </tcs>
+  </tabs>
+  <sections>
+    <codshippingbooking translate="label" module="codshippingbooking">
+      <label>Shipping Booking Settings</label>
+      <tab>tcs_codshippingbooking</tab>
+      <frontend_type>text</frontend_type>
+      <sort_order>1</sort_order>
+      <show_in_default>1</show_in_default>
+      <show_in_website>1</show_in_website>
+      <show_in_store>1</show_in_store>
+      <tab>tcs</tab>
+      <groups>
+        <codshippingbooking_settings translate="label">
+          <label>TCS C.O.D Shipping Booking Settings</label>
+          <frontend_type>text</frontend_type>
+          <sort_order>1</sort_order>
+          <show_in_default>1</show_in_default>
+          <show_in_website>1</show_in_website>
+          <show_in_store>1</show_in_store>
+                
+          <fields>
+	      		<codshippingbooking_user_key translate="label">
+              <label>API Key</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>1</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+           	</codshippingbooking_user_key>
+						<codshippingbooking_user_pass translate="label">
+              <label>API Password</label>
+              <frontend_type>password</frontend_type>
+              <sort_order>2</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+           	</codshippingbooking_user_pass>
+						<codshippingbooking_print translate="label">
+              <label>Print As</label>
+              <frontend_type>select</frontend_type>
+              <source_model>codshippingbooking/system_config_source_dropdown_print</source_model>
+              <sort_order>5</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </codshippingbooking_print>
+            <codshippingbooking_active translate="label">
+              <label>Enabled</label>
+              <frontend_type>select</frontend_type>
+              <source_model>adminhtml/system_config_source_yesno</source_model>
+              <sort_order>6</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </codshippingbooking_active>
+						<codshippingbooking_cost_center_id translate="label">
+              <label>Cost Center Id</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>3</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </codshippingbooking_cost_center_id>
+						<codshippingbooking_cost_center_label translate="label">
+              <label>Cost Center Label</label>
+              <frontend_type>text</frontend_type>
+              <sort_order>4</sort_order>
+              <show_in_default>1</show_in_default>
+              <show_in_website>0</show_in_website>
+              <show_in_store>0</show_in_store>
+            </codshippingbooking_cost_center_label>
+          </fields>
+        </codshippingbooking_settings>
+      </groups>
+    </codshippingbooking>
+  </sections>
+</config>

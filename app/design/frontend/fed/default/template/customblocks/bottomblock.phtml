@@ -1,0 +1,65 @@
+<?php 
+$enable=Mage::getStoreConfig('customblocks_options/blocksettings2/block_select2');
+
+$link1= Mage::getStoreConfig('customblocks_options/blocksettings2/block_link5');
+$image1=Mage::getStoreConfig('customblocks_options/blocksettings2/block_image5');
+$url1=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$a='<img src="'.$url1.''.$image1.'">';
+
+$link2= Mage::getStoreConfig('customblocks_options/blocksettings2/block_link6');
+$image2=Mage::getStoreConfig('customblocks_options/blocksettings2/block_image6');
+$url2=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$b='<img src="'.$url2.''.$image2.'">';
+
+$link3= Mage::getStoreConfig('customblocks_options/blocksettings2/block_link7');
+$image3=Mage::getStoreConfig('customblocks_options/blocksettings2/block_image7');
+$url3=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$c='<img src="'.$url3.''.$image3.'">';
+		
+$link4= Mage::getStoreConfig('customblocks_options/blocksettings2/block_link8');
+$image4=Mage::getStoreConfig('customblocks_options/blocksettings2/block_image8');
+$url4=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$d='<img src="'.$url4.''.$image4.'">';
+		
+$linkc1= Mage::getStoreConfig('customblocks_options/blocksettings2/block_linkc1');
+$imagec1=Mage::getStoreConfig('customblocks_options/blocksettings2/block_imagec1');
+$urlc1=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$c1='<img src="'.$urlc1.''.$imagec1.'">';
+		
+$linkc2= Mage::getStoreConfig('customblocks_options/blocksettings2/block_linkc2');
+$imagec2=Mage::getStoreConfig('customblocks_options/blocksettings2/block_imagec2');
+$urlc2=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$c2='<img src="'.$urlc2.''.$imagec2.'">';
+		
+$linkc3= Mage::getStoreConfig('customblocks_options/blocksettings2/block_linkc3');
+$imagec3=Mage::getStoreConfig('customblocks_options/blocksettings2/block_imagec3');
+$urlc3=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+		$c3='<img src="'.$urlc3.''.$imagec3.'">';
+		
+?>
+
+<?php if($enable==1){?>
+<div class="row" style="padding:15px;">
+<div class="col-md-6 mainblocks">
+<a href="<?php echo $link1; ?>"><?php echo $a; ?></a> 
+</div>
+<div class="col-md-3 mainblocks">
+<a href="<?php echo $link2; ?>"><?php echo $b; ?></a> 
+</div>
+<div class="col-md-3">
+<div class="col-md-12 mainblocks">
+<a href="<?php echo $link3; ?>"><?php echo $c; ?></a> 
+</div>
+<div class="col-md-12 mainblocks" style="margin-top:5px;">
+<a href="<?php echo $link4; ?>"><?php echo $d; ?></a> 
+</div>
+</div>
+</div>
+
+<div class="row" style="padding:20px;">
+	<div class="col-md-4"><a href="<?php echo $linkc1; ?>"><?php echo $c1; ?></a></div>
+	<div class="col-md-4"><a href="<?php echo $linkc2; ?>"><?php echo $c2; ?></a></div>
+	<div class="col-md-4"><a href="<?php echo $linkc3; ?>"><?php echo $c3; ?></a></div>
+</div>
+
+<?php }?>

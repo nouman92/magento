@@ -1,0 +1,81 @@
+<?php 
+
+$enable=Mage::getStoreConfig('customblocks_options/blocksettings1/block_select1');
+
+
+
+$link1= Mage::getStoreConfig('customblocks_options/blocksettings1/block_link1');
+
+$image1=Mage::getStoreConfig('customblocks_options/blocksettings1/block_image1');
+
+$url1=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
+		$a='<img src="'.$url1.''.$image1.'">';
+
+
+
+$link2= Mage::getStoreConfig('customblocks_options/blocksettings1/block_link2');
+
+$image2=Mage::getStoreConfig('customblocks_options/blocksettings1/block_image2');
+
+$url2=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
+		$b='<img src="'.$url2.''.$image2.'">';
+
+
+
+$link3= Mage::getStoreConfig('customblocks_options/blocksettings1/block_link3');
+
+$image3=Mage::getStoreConfig('customblocks_options/blocksettings1/block_image3');
+
+$url3=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
+		$c='<img src="'.$url3.''.$image3.'">';
+
+		
+
+$link4= Mage::getStoreConfig('customblocks_options/blocksettings1/block_link4');
+
+$image4=Mage::getStoreConfig('customblocks_options/blocksettings1/block_image4');
+
+$url4=Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA);
+
+		$d='<img src="'.$url4.''.$image4.'">';
+
+		
+
+?>
+
+<?php if($enable==1){?>
+<br/><br/>
+<div style="border-bottom: 4px solid #ca2728; width: 100%"><img src="<?= $this->getSkinUrl('images/featured.jpg');?>" /></div>
+
+<div class="row" style="padding:15px;">
+
+<div class="col-md-3 mainblocks">
+
+<a href="<?php echo $link1; ?>"><?php echo $a; ?></a> 
+
+</div>
+
+<div class="col-md-3 mainblocks">
+
+<a href="<?php echo $link2; ?>"><?php echo $b; ?></a>
+
+</div>
+
+<div class="col-md-3 mainblocks">
+
+<a href="<?php echo $link3; ?>"><?php echo $c; ?></a>
+
+</div>
+
+<div class="col-md-3 mainblocks">
+
+<a href="<?php echo $link4; ?>"><?php echo $d; ?></a>
+
+</div>
+
+</div>
+
+<?php } ?>

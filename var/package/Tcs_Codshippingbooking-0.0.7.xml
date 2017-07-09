@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package>
+    <name>Tcs_Codshippingbooking</name>
+    <version>0.0.7</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/gpl-license">GNU General Public License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>TCS C.O.D Shipping Booking and Airway Bill generator.</summary>
+    <description>An extension to the existing Magento based back-ends where store owners are using TCS as their Shipping partners for their C.O.D shipments.&#xD;
+&#xD;
+Extension will help generate Airway Billing prints in PDF and HTML formats required at the order fulfillment last steps, right from the Order Details page, instead of going into C.O.D portal.&#xD;
+&#xD;
+You don't need to an expert at API integration now, just install the extension and the Airway Bills will be just the matter of few clicks.&#xD;
+&#xD;
+For more details, visit our website:&#xD;
+http://www.tcscouriers.com/</description>
+    <notes>Stable release&#xD;
+One more service added to the form with correction</notes>
+    <authors><author><name>TCS</name><user>admin</user><email>kamran.haider@tcs-e.com</email></author></authors>
+    <date>2017-01-21</date>
+    <time>07:31:11</time>
+    <contents><target name="magecommunity"><dir name="Tcs"><dir name="Codshippingbooking"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><dir name="View"><file name="Form.php" hash="89eea077cbd9655185d810a1730b8eca"/><file name="Preview.php" hash="a508c46ecaea4ed911a2900e338e70c9"/></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="ca9fbf06ec6cefc5e65d3322d77e18f3"/></dir><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><dir name="Dropdown"><file name="Print.php" hash="e15b139fa05ac57faa411df4d712d8c1"/></dir></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><dir name="Sales"><dir name="Order"><file name="IndexController.php" hash="c958b0207a5a80627e1296eec2111e9c"/></dir></dir></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="188ae2bb96a106236ebd6d473e7511c5"/><file name="config.xml" hash="f8ac6a60416633f4ee433b5363a31b13"/><file name="system.xml" hash="13badad35e66ebd504c850a60e69b311"/></dir></dir></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="codshippingbooking.xml" hash="e6c0e5744fc265f080e7cb7e33132323"/></dir><dir name="template"><dir name="codshippingbooking"><file name="button.phtml" hash="544ddf2eb9652f5388b3dff8d58ac4a6"/><file name="popup.phtml" hash="b5bf13b50efaf149d5ec815d2ad581b7"/><file name="preview.phtml" hash="1f0d865ce9dd722c2a97422c40f9e90d"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Tcs_Codshippingbooking.xml" hash="a755774d04ab8ce984ee2d705f56b64b"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="images"><dir name="codshippingbooking"><file name="cnlogo.png" hash="d4e078565bf8219f9d7ebf1410c5a2a5"/></dir></dir></dir></dir></dir></target><target name="magelib"><dir name="Codshippingbooking"><dir name="config"><file name="tcpdf_config_alt.php" hash="e3e5468a80e5f91ec9b0773af9b191b7"/></dir><dir name="fonts"><file name="helvetica.php" hash="2a315fa2593161154c319788f0ef2127"/><file name="helveticab.php" hash="3daad3713df02c15beebd09ceecacacd"/><file name="helveticabi.php" hash="c22fdc8941f2956e0930b20105870468"/><file name="helveticai.php" hash="e0a7f23376f50de631db93814aff2e35"/><file name="times.php" hash="a75033315ee90464410b47cc27ce9ff0"/><file name="timesb.php" hash="ad485022027867116de0bf6c25b1854a"/><file name="timesbi.php" hash="a5f3fbbef1831fe0bcd060edb6e5010b"/><file name="timesi.php" hash="8fd8e9a11cca513a4da0f25ff1a24149"/></dir><dir name="image"><file name="cnlogo.png" hash="d4e078565bf8219f9d7ebf1410c5a2a5"/></dir><dir name="include"><dir name="barcodes"><file name="datamatrix.php" hash="9a29da1e201fb23de4f499adbb9f6a71"/><file name="pdf417.php" hash="3abe66ba8da6b6bf9cf1c6b0e907d51d"/><file name="qrcode.php" hash="f214c50485dc7301cdd70b23e46193a0"/></dir><file name="sRGB.icc" hash="060e79448f1454582be37b3de490da2f"/><file name="tcpdf_colors.php" hash="cacdbe68a428ae36151a3d1152b2b77b"/><file name="tcpdf_filters.php" hash="fb794db6e06fa3cf7479fc889894caf3"/><file name="tcpdf_font_data.php" hash="8f83bbc144d70505672f82679546c72d"/><file name="tcpdf_fonts.php" hash="5f4ae32bd59400b8f788ac644b693ed2"/><file name="tcpdf_images.php" hash="72ef804a6aa7becfeda43428ec55489b"/><file name="tcpdf_static.php" hash="e7527f13aee67945cf001700fba6b00d"/></dir><file name="tcpdf.php" hash="a43db5c9fce068592a794c8580c3fcae"/><file name="tcpdf_autoconfig.php" hash="bcb93bbeb8cf2831e49ff5541d277a1f"/><file name="tcpdf_barcodes_1d.php" hash="d306e9ad7b8b67464493c3281417afdc"/><file name="tcpdf_include.php" hash="d8c7b9c53d87ed407fe35d2c5007b676"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>7.0.2</max></php></required></dependencies>
+</package>

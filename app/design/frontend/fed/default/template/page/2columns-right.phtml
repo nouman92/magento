@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<?php echo $this->getChildHtml('head');?>	
+
+</head>
+
+<body>	
+
+	<!-- Header part -->
+
+	<div class="col-md-12">
+
+	<?php echo $this->getChildHtml('header');?>
+
+<br/>
+</div>
+
+
+
+	<?php echo $this->getChildHtml('after_body_start') ?>
+
+<div class="container">
+
+	<div><?php echo $this->getChildHtml('breadcrumbs') ?></div>
+
+		
+		
+
+			<div class="col-md-9">	
+
+			<?php echo $this->getChildHtml('global_messages') ?>			
+
+			<?php echo $this->getChildHtml('content');?>			
+
+			</div>
+
+			<div class="col-md-3">
+
+			<?php
+
+			if($this->getChildHtml('right')){
+
+			echo $this->getChildHtml('right');	
+			
+			?>
+			<img style="margin-top: 10px" src="<?= $this->getSkinUrl('images/right_side.png');?>	"/>		
+			
+			<?php
+
+			}else{
+
+				echo 'No';
+
+			}
+
+			  ?>	
+
+			</div>
+			
+		</div>	
+
+	
+
+	<!--Footer part-->
+
+<div class="footer">
+
+	<div class="col-md-12">	
+
+	  <?php echo $this->getChildHtml('footer');?>
+
+	</div>
+
+</div>
+
+</body>
+
+
+
+</html>

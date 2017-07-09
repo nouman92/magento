@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   TCS
+ * @package    Tcs_Codshippingbooking
+ * @copyright  Copyright (c) 2015 TCS (Pvt) Ltd.
+ * @author	   TCS Developer <kamran.haider@tcs-e.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+-->
+<layout version="1.0">
+	<adminhtml_sales_order_view>
+		<reference name="head">
+			<action method="addItem">
+					<type>js_css</type>
+					<name>prototype/windows/themes/default.css</name>
+			</action>
+			<action method="addCss">
+					<name>lib/prototype/windows/themes/magento.css</name>
+			</action>
+			<action method="addItem">
+				<type>js_css</type>
+				<name>prototype/windows/themes/magento.css</name>
+			</action>
+		</reference>
+		<reference name="order_info">
+			<action method="setTemplate">
+				<template>codshippingbooking/button.phtml</template>
+			</action> 
+		</reference>		
+	</adminhtml_sales_order_view>
+	<tcs_codshippingbooking_adminhtml_sales_order_index_add>
+		<reference name="root">
+            <remove name="header"/>
+            <remove name="footer"/>
+						<remove name="top.menu" />
+						<remove name="menu" />
+						<remove name="top.links" />
+						<remove name="top.container" />
+        </reference>
+		<reference name="content">
+				<block type="codshippingbooking/adminhtml_sales_order_view_form" name='codshippingbooking_popup' template="codshippingbooking/popup.phtml"></block>
+		</reference>
+	</tcs_codshippingbooking_adminhtml_sales_order_index_add>
+	<tcs_codshippingbooking_adminhtml_sales_order_index_preview>
+		<reference name="root">
+            <remove name="header"/>
+            <remove name="footer"/>
+						<remove name="top.menu" />
+						<remove name="menu" />
+						<remove name="top.links" />
+						<remove name="top.container" />
+        </reference>
+		<reference name="content">
+				<block type="codshippingbooking/adminhtml_sales_order_view_preview" name='codshippingbooking_preview' template="codshippingbooking/preview.phtml"></block>
+		</reference>
+	</tcs_codshippingbooking_adminhtml_sales_order_index_preview>
+</layout>

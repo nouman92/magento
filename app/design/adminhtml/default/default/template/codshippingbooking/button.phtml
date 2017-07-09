@@ -1,0 +1,68 @@
+<?php
+/*
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the GNU General Public License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/gpl-license
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@refersion.com so we can send you a copy immediately.
+ *
+ * @category   TCS
+ * @package    Tcs_Codshippingbooking
+ * @copyright  Copyright (c) 2015 TCS (Pvt) Ltd.
+ * @author	   TCS Developer <kamran.haider@tcs-e.com>
+ * @license    http://opensource.org/licenses/gpl-license GNU General Public License
+ */
+?>
+<?php $isActive = Mage::getStoreConfig('codshippingbooking/codshippingbooking_settings/codshippingbooking_active');?>
+<?php
+if($isActive){
+?>
+<div class="entry-edit">
+    <div class="entry-edit-head">
+        <h4><?php echo 'TCS C.O.D Shipping Booking';?></h4>
+    </div>
+    <fieldset>
+        <p>
+        	To enter the shipping booking details please click the buttion.
+          <button type="button" onclick="javascript:showPopup()">Add Details</button>
+        </p>
+    </fieldset>
+</div>
+<script type="text/javascript">
+<?php $order = Mage::registry('sales_order');?>
+		var sUrl = "<?php echo $this->getUrl('admin_codshippingbooking/adminhtml_sales_order_index/add', array('order_id'=>$order->getId())) ?>";
+    function showPopup() {
+    oPopup = new Window({
+    id:'popup_window',
+    className: 'magento',
+		title:'Shipping Booking',
+    url: sUrl,
+    width: 820,
+    height: 600,
+    minimizable: false,
+    maximizable: false,
+		closable:true,
+    showEffectOptions: {
+        duration: 0.4
+    },
+    hideEffectOptions:{
+        duration: 0.4
+    },
+    destroyOnClose: true
+    });
+    oPopup.setZIndex(100);
+    oPopup.showCenter(true);
+}
+
+function closePopup() {
+    Windows.close('popup_window');
+}
+ 
+</script>
+<?php }?>

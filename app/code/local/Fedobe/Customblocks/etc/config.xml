@@ -1,0 +1,62 @@
+<config>    
+    <modules>
+        <Fedobe_Customblocks>
+            <version>0.1.0</version>
+        </Fedobe_Customblocks>
+    </modules>
+	
+	<global>
+		<helpers>
+			<customblocks>
+				<class>Fedobe_Customblocks_Helper</class>
+			</customblocks>
+		</helpers>
+		<blocks>
+            <customblocks>
+                <class>Fedobe_Customblocks_Block</class>
+            </customblocks>
+        </blocks>
+		 <models>
+            <customblocks>
+                <class>Fedobe_Customblocks_Model</class>
+            </customblocks>   
+        </models>
+	</global>
+	
+	<frontend>
+        <routers>
+            <customblocks>
+                <use>standard</use>
+                <args>
+                    <module>Fedobe_Customblocks</module>
+                    <frontName>customblocks</frontName>
+                </args>
+            </customblocks>
+        </routers>  
+    </frontend>
+	
+	
+	<adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <customblocks_options>
+                                            <title>Store Custom Blocks Module Section</title>
+                                        </customblocks_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+	
+	
+</config>

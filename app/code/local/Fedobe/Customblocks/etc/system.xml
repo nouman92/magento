@@ -1,0 +1,427 @@
+<config>
+    <tabs>
+        <customconfig translate="label" module="customblocks">
+            <label>Fedobe Eros</label>
+            <sort_order>99999</sort_order>
+        </customconfig>
+    </tabs> 
+	<sections>
+        <customblocks_options translate="label" module="customblocks">
+            <label>Eros Custom Block Options</label>
+            <tab>customconfig</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>     
+		
+		
+		<groups>
+                <addtopage translate="label">
+                    <label>Add Custom Blocks To Pages</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <info translate="label">
+                            <frontend_model>customblocks/about</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </info>
+                        <addtopage_info>
+                            <label>Paste the following Block into homepage to enable Header Block.</label>
+                            <frontend_type>hidden</frontend_type>
+                            <comment>{{block type="customblocks/customblock" alias="root" template="customblocks/customblock.phtml"}}</comment>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </addtopage_info>
+                    </fields>
+                </addtopage>
+            </groups>
+			
+			<groups>
+                <blocksettings0 translate="label">
+                    <label>Options For Frontpage Fullwidth Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+					<fields>
+					<block_select0>
+            				<label>Enable</label>
+							<comment>Select "Yes" to Enable and "No" to Disable Block</comment>
+            				<frontend_type>select</frontend_type>
+							<source_model>customblocks/words</source_model> 
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_select0>
+						<block_link0>
+            				<label>Link to your Block</label>
+							<comment>Link for your block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link0>
+						<block_image0>
+            				<label>Frontpage Fullwidth Block Image</label>
+							<comment>For better view. width:1920px and height:500px</comment>
+            				<frontend_type>image</frontend_type>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>2</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image0>
+						
+    				</fields>                     
+                </blocksettings0>
+            </groups>  
+			
+			
+			 <groups>
+                <blocksettings1 translate="label">
+                    <label>Options For Header Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+					<fields>
+					<block_select1>
+            				<label>Enable</label>
+							<comment>Select "Yes" to Enable and "No" to Disable Block</comment>
+            				<frontend_type>select</frontend_type>
+							<source_model>customblocks/words</source_model> 
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_select1>
+						<block_link1>
+            				<label>First Block Link</label>
+							<comment>Link for your First block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link1>
+						<block_image1>
+            				<label>First Block Image</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(260x360)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>2</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image1>
+						
+						<block_link2>
+            				<label>Second Block Link</label>
+							<comment>Link for your second block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>3</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link2>
+						<block_image2>
+            				<label>Second Block Image</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(260x360)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>4</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image2>
+						
+						<block_link3>
+            				<label>Third Block Link</label>
+							<comment>Link for your third block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>5</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link3>
+						<block_image3>
+            				<label>Third Block Image</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(260x360)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>6</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image3>
+						
+						<block_link4>
+            				<label>Fourth Block Link</label>
+							<comment>Link for your fourth block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>7</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link4>
+						<block_image4>
+            				<label>Fourth Block Image</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(260x360)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>8</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image4>
+						
+    				</fields>                     
+                </blocksettings1>
+            </groups>                           
+			
+			 			
+			
+			<groups>
+                <blocksettings2 translate="label">
+                    <label>Options For Bottom Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+					<fields>
+					<block_select2>
+            				<label>Enable</label>
+							<comment>Select "Yes" to Enable and "No" to Disable Block</comment>
+            				<frontend_type>select</frontend_type>
+							<source_model>customblocks/words</source_model> 
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_select2>
+						<block_link5>
+            				<label>Link for Left Block</label>
+							<comment>Link for left block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link5>
+						<block_image5>
+            				<label>Image for Left Block</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(550x350)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>2</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image5>
+						
+						<block_link6>
+            				<label>Link for middle block</label>
+							<comment>Link for middle block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>3</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link6>
+						<block_image6>
+            				<label>Image for middle block</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(276x350)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>4</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image6>
+						
+						<block_link7>
+            				<label>Link for top right block</label>
+							<comment>Link for right block 2 (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>5</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link7>
+						<block_image7>
+            				<label>Image for top right block 1</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(280x170)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>6</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image7>
+				
+						<block_link8>
+            				<label>Link for bottom right block</label>
+							<comment>Link for right block 2 (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>7</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link8>
+						<block_image8>
+            				<label>Image for bottom right block</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(280x170)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>8</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image8>
+						
+							<block_linkc1>
+            				<label>Link for Consecutive block 1</label>
+							<comment>Link for Consecutive block 1 (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>9</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_linkc1>
+						<block_imagec1>
+            				<label>Image for Consecutive block 1</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(400x140)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>10</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_imagec1>
+						
+						<block_linkc2>
+            				<label>Link for Consecutive block 2</label>
+							<comment>Link for right block 2 (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>11</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_linkc2>
+						<block_imagec2>
+            				<label>Image for Consecutive block 2</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(400x140)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>12</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_imagec2>
+						
+								<block_linkc3>
+            				<label>Link for Consecutive block 3</label>
+							<comment>Link for right block 2 (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>13</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_linkc3>
+						<block_imagec3>
+            				<label>Image for Consecutive block 3</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(400x140)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>14</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_imagec3>
+						
+			
+					</fields>                  
+                </blocksettings2>
+            </groups>            
+			
+			
+			<groups>
+                <blocksettings3 translate="label">
+                    <label>Options For Brand Logo Banner</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store> 
+					<fields>
+					<block_select3>
+            				<label>Enable</label>
+							<comment>Select "Yes" to Enable and "No" to Disable Block</comment>
+            				<frontend_type>select</frontend_type>
+							<source_model>customblocks/words</source_model> 
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_select3>
+						<block_link9>
+            				<label>Link for the Block</label>
+							<comment>Link for left block (Ex: http://fedobe.com)</comment>
+            				<frontend_type>text</frontend_type>
+            				<sort_order>1</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_link9>
+						<block_image9>
+            				<label>Image for the Block</label>
+            				<frontend_type>image</frontend_type>
+							<comment>Fix:(1920x350)px</comment>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+                            <upload_dir>media</upload_dir>
+            				<sort_order>2</sort_order>
+            				<show_in_default>1</show_in_default>
+            				<show_in_website>1</show_in_website>
+            				<show_in_store>1</show_in_store>                    
+        				</block_image9>
+					
+			
+					</fields>                  
+                </blocksettings3>
+            </groups>                    
+			
+			
+        </customblocks_options>
+		
+   </sections> 
+	
+	
+	
+	
+</config>

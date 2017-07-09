@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Fedobe_Customblocks>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Fedobe_Customblocks>
+    </modules>
+</config> 

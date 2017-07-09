@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="root">
+            <reference name="content">
+                <block type="customblocks/customblock" name="customblock" as="customblock" template="customblocks/customblock.phtml" before="-"/>
+            </reference>
+        </reference>
+    </default>
+</layout>

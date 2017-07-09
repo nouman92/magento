@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<!--<link href='http://fonts.googleapis.com/css?family=Bad+Script' rel='stylesheet' type='text/css'>-->
+
+<?php echo $this->getChildHtml('head');?>
+
+</head>
+
+<body>
+
+	
+
+	<!-- Header part -->
+
+	<div class="col-md-12">
+
+	<?php echo $this->getChildHtml('header');?>
+
+	</div>	
+	
+		<?php 
+if( Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && 
+Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) { /* if is home page */?>	
+	<?php echo $this->getLayout()->createBlock('customblocks/mainblock')->setTemplate('customblocks/mainblock.phtml')->toHtml(); ?>
+	<?php } ?>
+
+	
+
+	<div class="container" style="padding-top:50px">
+<br/>	
+	<?php echo $this->getChildHtml('content');?>
+
+	</div>
+	
+	
+	<?php 
+if( Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && 
+Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) { /* if is home page */?>	
+	<?php echo $this->getLayout()->createBlock('customblocks/customblock')->setTemplate('customblocks/brandblocks.phtml')->toHtml(); ?>
+	<?php } ?>	
+
+<div class="container">
+	<?php 
+if( Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && 
+Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) { /* if is home page */?>	
+	<?php echo $this->getLayout()->createBlock('customblocks/customblock')->setTemplate('customblocks/bottomblock.phtml')->toHtml(); ?>
+	<?php } ?>
+	</div>
+	
+
+	<!--Footer part-->
+
+	<div class="footer">
+
+		<div class="col-md-12">
+
+	  		<?php echo $this->getChildHtml('footer');?>
+
+	  	</div>
+
+	</div>
+
+</body>
+
+
+
+</html>

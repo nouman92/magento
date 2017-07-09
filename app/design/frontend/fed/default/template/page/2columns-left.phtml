@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<?php echo $this->getChildHtml('head');?>	
+
+</head>
+
+<body>	
+
+	<!-- Header part -->
+
+	<div class="col-md-12">
+
+	<?php echo $this->getChildHtml('header');?>
+
+<br/><br/>
+
+	</div>
+
+
+	<?php 
+if( Mage::getSingleton('cms/page')->getIdentifier() == 'home'  && 
+Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms' ) { /* if is home page */?>	
+	<?php echo $this->getLayout()->createBlock('customblocks/mainblock')->setTemplate('customblocks/mainblock.phtml')->toHtml(); ?>
+	<?php } ?>
+
+
+	<div class="container">
+
+	<?php echo $this->getChildHtml('after_body_start') ?>
+
+	
+
+	<div style="margin-top:20px"><?php echo $this->getChildHtml('breadcrumbs') ?></div>
+
+		<div class="row">
+
+			<div class="col-md-2">
+
+			<?php
+
+			
+
+			echo $this->getChildHtml('left');	
+
+			
+
+			  ?>			
+
+			</div>		
+
+			<div class="col-md-8">
+
+			<?php echo $this->getChildHtml('global_messages') ?>			
+
+			<?php echo $this->getChildHtml('content');?>			
+
+			</div>
+
+			<div class="col-md-2">
+
+			<?php
+
+			
+
+			echo $this->getChildHtml('right');	
+
+			
+
+			  ?>			
+
+			</div>
+
+		</div>	
+
+	</div>
+
+	
+
+	<!--Footer part-->
+
+	<div class="col-md-12">	
+
+	  <?php echo $this->getChildHtml('footer');?>
+
+	</div>
+
+</body>
+
+
+
+</html>
