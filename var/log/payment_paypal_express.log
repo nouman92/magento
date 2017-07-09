@@ -1,0 +1,56 @@
+2017-07-09T16:24:05+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [ManageRecurringPaymentsProfileStatus] => Array
+        (
+            [PROFILEID] => I-E0S578XSR789
+            [ACTION] => Suspend
+            [METHOD] => ManageRecurringPaymentsProfileStatus
+            [VERSION] => 72.0
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2017-07-09T16:24:05Z
+            [CORRELATIONID] => 67676ae23450d
+            [ACK] => Failure
+            [VERSION] => 72.0
+            [BUILD] => 29297572
+            [L_ERRORCODE0] => 10002
+            [L_SHORTMESSAGE0] => Authentication/Authorization Failed
+            [L_LONGMESSAGE0] => You do not have permissions to make this API call
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 3260
+)
+
+2017-07-09T16:24:27+00:00 DEBUG (7): Array
+(
+    [url] => https://api-3t.sandbox.paypal.com/nvp
+    [ManageRecurringPaymentsProfileStatus] => Array
+        (
+            [PROFILEID] => I-E0S578XSR789
+            [ACTION] => Cancel
+            [METHOD] => ManageRecurringPaymentsProfileStatus
+            [VERSION] => 72.0
+            [BUTTONSOURCE] => Magento_Cart_Community
+        )
+
+    [response] => Array
+        (
+            [TIMESTAMP] => 2017-07-09T16:24:26Z
+            [CORRELATIONID] => a2de738dbd86c
+            [ACK] => Failure
+            [VERSION] => 72.0
+            [BUILD] => 29297572
+            [L_ERRORCODE0] => 10002
+            [L_SHORTMESSAGE0] => Authentication/Authorization Failed
+            [L_LONGMESSAGE0] => You do not have permissions to make this API call
+            [L_SEVERITYCODE0] => Error
+        )
+
+    [__pid] => 29980
+)
+

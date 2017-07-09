@@ -28,22 +28,22 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Sat, 08 Jul 2017 19:53:09 +0000]]></date>
+            <date><![CDATA[Sun, 09 Jul 2017 14:27:48 +0000]]></date>
         </install>
         <crypt>
-            <key><![CDATA[2a606f1309d574bb7e7eefc5e3e44bea]]></key>
+            <key><![CDATA[930a15ac85032bc8b1a55b57aa51d386]]></key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
             <db>
-                <table_prefix><![CDATA[ft_]]></table_prefix>
+                <table_prefix><![CDATA[]]></table_prefix>
             </db>
             <default_setup>
                 <connection>
                     <host><![CDATA[fashiontime.c4wrdesrpkah.ap-south-1.rds.amazonaws.com:3306]]></host>
                     <username><![CDATA[fashiontime]]></username>
                     <password><![CDATA[fashiontime]]></password>
-                    <dbname><![CDATA[magentostoredb]]></dbname>
+                    <dbname><![CDATA[magento_with_sample_data]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
                     <type><![CDATA[pdo_mysql]]></type>
@@ -58,7 +58,7 @@
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[manager]]></frontName>
+                    <frontName><![CDATA[admin]]></frontName>
                 </args>
             </adminhtml>
         </routers>
